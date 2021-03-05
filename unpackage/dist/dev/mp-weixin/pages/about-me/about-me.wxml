@@ -1,0 +1,1 @@
+<view class="contact"><image class="img" src="../../static/imgDemo/lianxime.png"></image><view class="info"><view data-event-opts="{{[['tap',[['phone',['$event']]]]]}}" bindtap="__e">联系电话：15380408957 (点击拨打)</view><view>联系地址：安徽省安庆市天城中学</view></view><map class="map" longitude="{{longitude}}" scale="{{scale}}" latitude="{{latitude}}" markers="{{markers}}"></map></view>

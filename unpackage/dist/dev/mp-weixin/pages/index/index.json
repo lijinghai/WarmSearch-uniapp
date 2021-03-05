@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "暖寻",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "goods-list": "/components/goodsList/goodsList"
+  }
+}

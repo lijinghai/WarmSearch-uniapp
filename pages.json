@@ -1,0 +1,110 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "暖寻",
+				"enablePullDownRefresh": true
+			}
+		}
+	    ,{
+            "path" : "pages/lost/lost",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "寻物",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/find/find",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "招领",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/people/people",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人中心",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/goods-detail/goods-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "物品详细信息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finds-detail/finds-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "待招领物品",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/about-me/about-me",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "关于我们",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/upload-lost/upload-lost",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发表寻物启事",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "暖寻",
+		"navigationBarBackgroundColor": "#87CEFF",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"selectedColor":"#87CEFF",
+		"color":"#C0C0C0",
+		"list": [
+			{
+				"text":"首页",
+				"pagePath":"pages/index/index",
+				"iconPath":"static/icon/home.png",
+				"selectedIconPath":"static/icon/active-home.png"
+			},
+			{
+				"text":"寻物",
+				"pagePath":"pages/lost/lost",
+				"iconPath":"static/icon/lost.png",
+				"selectedIconPath":"static/icon/active-lost.png"
+			},
+			{
+				"text":"招领",
+				"pagePath":"pages/find/find",
+				"iconPath":"static/icon/find.png",
+				"selectedIconPath":"static/icon/active-find.png"
+			},
+			{
+				"text":"个人中心",
+				"pagePath":"pages/people/people",
+				"iconPath":"static/icon/people.png",
+				"selectedIconPath":"static/icon/active-people.png"
+			}
+		]
+	}
+}

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/lost/lost",
+    "pages/find/find",
+    "pages/people/people",
+    "pages/goods-detail/goods-detail",
+    "pages/finds-detail/finds-detail",
+    "pages/about-me/about-me",
+    "pages/upload-lost/upload-lost"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "暖寻",
+    "navigationBarBackgroundColor": "#87CEFF",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#87CEFF",
+    "color": "#C0C0C0",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/active-home.png"
+      },
+      {
+        "text": "寻物",
+        "pagePath": "pages/lost/lost",
+        "iconPath": "static/icon/lost.png",
+        "selectedIconPath": "static/icon/active-lost.png"
+      },
+      {
+        "text": "招领",
+        "pagePath": "pages/find/find",
+        "iconPath": "static/icon/find.png",
+        "selectedIconPath": "static/icon/active-find.png"
+      },
+      {
+        "text": "个人中心",
+        "pagePath": "pages/people/people",
+        "iconPath": "static/icon/people.png",
+        "selectedIconPath": "static/icon/active-people.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap74.json"
+}
