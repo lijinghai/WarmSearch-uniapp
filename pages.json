@@ -11,7 +11,7 @@
             "path" : "pages/lost/lost",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "寻物",
+                "navigationBarTitleText": "寻失物",
                 "enablePullDownRefresh": true
             }
             
@@ -20,7 +20,7 @@
             "path" : "pages/find/find",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "招领",
+                "navigationBarTitleText": "寻失主",
                 "enablePullDownRefresh": true
             }
             
@@ -88,13 +88,13 @@
 				"selectedIconPath":"static/icon/active-home.png"
 			},
 			{
-				"text":"寻物",
+				"text":"寻失物",
 				"pagePath":"pages/lost/lost",
 				"iconPath":"static/icon/lost.png",
 				"selectedIconPath":"static/icon/active-lost.png"
 			},
 			{
-				"text":"招领",
+				"text":"寻失主",
 				"pagePath":"pages/find/find",
 				"iconPath":"static/icon/find.png",
 				"selectedIconPath":"static/icon/active-find.png"
