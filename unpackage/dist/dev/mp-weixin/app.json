@@ -27,13 +27,13 @@
         "selectedIconPath": "static/icon/active-home.png"
       },
       {
-        "text": "寻物",
+        "text": "寻失物",
         "pagePath": "pages/lost/lost",
         "iconPath": "static/icon/lost.png",
         "selectedIconPath": "static/icon/active-lost.png"
       },
       {
-        "text": "招领",
+        "text": "寻失主",
         "pagePath": "pages/find/find",
         "iconPath": "static/icon/find.png",
         "selectedIconPath": "static/icon/active-find.png"
