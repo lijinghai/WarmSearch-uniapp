@@ -96,4 +96,8 @@
 
 ![zhifubao](README.assets/zhifubao.jpg)
 
+<<<<<<< HEAD
 ![weixing](README.assets/weixing.png)
+=======
+![weixing](README.assets/weixing.png)
+>>>>>>> 4e2eb7cfec9bc65d955bef7d0a905b5245f976f0
