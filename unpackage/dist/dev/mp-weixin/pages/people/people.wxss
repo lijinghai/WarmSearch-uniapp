@@ -75,6 +75,7 @@
 	-webkit-align-items: center;
 	        align-items: center;
 	padding: 20px;
+	background: -webkit-gradient(linear, left bottom, right top, from(#63b8ff), color-stop(25%, #4876ff), to(#3a5fcd));
 	background: -webkit-linear-gradient(bottom left, #63b8ff 0%, #4876ff 25%, #3a5fcd 100%);
 	background: linear-gradient(to top right, #63b8ff 0%, #4876ff 25%, #3a5fcd 100%);
 }
@@ -86,10 +87,12 @@
 .userIcon {
 	-webkit-align-self: flex-end;
 	        align-self: flex-end;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	overflow: hidden;
 	width: 100px;
 	height: 100px;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5)
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5)
 }
 

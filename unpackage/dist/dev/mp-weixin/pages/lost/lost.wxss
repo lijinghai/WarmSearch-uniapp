@@ -58,7 +58,8 @@ page {
 .pics .right .item image {
   width: 520rpx;
   height: 520rpx;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 .pics .right .item .lname {
   font-size: 35rpx;
