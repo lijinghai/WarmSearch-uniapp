@@ -15,7 +15,16 @@
                 "enablePullDownRefresh": true
             }
             
-        }
+        },
+		{
+		    "path" : "pages/add/add",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "发布信息",
+		        "enablePullDownRefresh": true
+		    }
+		    
+		}
         ,{
             "path" : "pages/find/find",
             "style" :                                                                                    
@@ -92,6 +101,12 @@
 				"pagePath":"pages/lost/lost",
 				"iconPath":"static/icon/lost.png",
 				"selectedIconPath":"static/icon/active-lost.png"
+			},
+			{
+				"text":"发布信息",
+				"pagePath":"pages/add/add",
+				"iconPath":"static/icon/add.png",
+				"selectedIconPath":"static/icon/active-add.png"
 			},
 			{
 				"text":"寻失主",

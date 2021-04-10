@@ -9,9 +9,12 @@
 		</view>
 		
 		<view class="aboutme">
-			<button type="default" @click="gotoLost(url)">寻找物品</button>
+			<button type="default" @click="gotoLost(url)">我的发布</button>
+			<button type="default" @click="gotoLost(url)">我的认领</button>
 			<!-- <text>关于我们</text> -->
 			<button type="default" @click="goto(url)">关于我们</button>
+			<button type="default" @click="gotoShare(url)">分享该小程序</button>
+			<button type="default" @click="goto(url)">联系客服</button>
 		</view>
 	</view>
 </template>
@@ -36,10 +39,27 @@
 			     uni.navigateTo({
 			        url: '/pages/upload-lost/upload-lost'
 			      })
-			}
+			},
+			gotoShare(url) {
+			     uni.navigateTo({
+			        url: '/pages/about-me/about-me'
+			      })
+			},
 		},
 		onLoad: function(option) {
 			let that = this;
+			uni.share({
+			    provider: "weixin",
+			    scene: "WXSceneSession",
+			    type: 2,
+			    imageUrl: "https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/d8590190-4f28-11eb-b680-7980c8a877b8.png",
+			    success: function (res) {
+			        console.log("success:" + JSON.stringify(res));
+			    },
+			    fail: function (err) {
+			        console.log("fail:" + JSON.stringify(err));
+			    }
+			});
  
 			uni.login({
 				provider: 'weixin',

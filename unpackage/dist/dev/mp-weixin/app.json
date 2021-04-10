@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/lost/lost",
+    "pages/add/add",
     "pages/find/find",
     "pages/people/people",
     "pages/goods-detail/goods-detail",
@@ -33,6 +34,12 @@
         "selectedIconPath": "static/icon/active-lost.png"
       },
       {
+        "text": "发布信息",
+        "pagePath": "pages/add/add",
+        "iconPath": "static/icon/add.png",
+        "selectedIconPath": "static/icon/active-add.png"
+      },
+      {
         "text": "寻失主",
         "pagePath": "pages/find/find",
         "iconPath": "static/icon/find.png",
@@ -46,6 +53,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

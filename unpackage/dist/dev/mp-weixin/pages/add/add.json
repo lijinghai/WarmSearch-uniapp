@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "发布信息",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "uni-file-picker": "/uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker",
+    "tabar-head": "/components/tabarHead",
+    "pub-classify": "/components/publish/pubClassify"
+  }
+}
