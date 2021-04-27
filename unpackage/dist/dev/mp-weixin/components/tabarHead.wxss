@@ -32,9 +32,7 @@
 	left:0;
 	height: 4px;
 	width: 50%;
-	-webkit-border-radius: 5px;
-	        border-radius: 5px;
-	background: -webkit-gradient(linear,left top, right top,from(red),to(orange));
+	border-radius: 5px;
 	background: -webkit-linear-gradient(left,red,orange);
 	background: linear-gradient(to right,red,orange);
 	-webkit-transition: all .2s ease-in-out;

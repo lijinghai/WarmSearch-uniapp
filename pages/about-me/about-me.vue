@@ -2,8 +2,8 @@
 	<view class="contact">
 		<image class="img" src="../../static/imgDemo/lianxime.png"></image>
 		<view class="info">
-			<view @click="phone">联系电话：15380408957 (点击拨打)</view>
-			<view>联系地址：安徽省安庆市天城中学</view>
+			<view @click="phone">联系电话：152*******12(点击拨打)</view>
+			<view>联系地址：北京</view>
 		</view>
 		<!-- 地图 -->
 		<map class="map" :longitude="longitude" :scale="scale" :latitude="latitude" :markers="markers"></map>
@@ -14,14 +14,14 @@
 	export default {
 		data() {
 			return {
-				longitude: 116.946183,    //经度
-				latitude: 30.816133,    //纬度
+				longitude: 118.798656,    //经度
+				latitude: 32.076794,    //纬度
 				scale: 16,    //设置地图的缩放级别
 				markers:[
 					{
-						longitude: 116.946183,    //经度
-						latitude: 30.816133,    //纬度
-						iconPath: '../../static/imgDemo/tcLogo.png',
+						longitude: 118.798656,    //经度
+						latitude: 32.076794,    //纬度
+						iconPath: '../../static/imgDemo/xuanwuhu.jpg',
 						width:30,
 						height:30
 					}
@@ -31,7 +31,7 @@
 		methods: {
 			phone() {
 				uni.makePhoneCall({
-					phoneNumber: '15380408957'
+					phoneNumber: '152*******12'
 				})
 			}
 		}

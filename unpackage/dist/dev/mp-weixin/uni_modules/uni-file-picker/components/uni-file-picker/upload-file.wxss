@@ -94,10 +94,8 @@
 .is-list-card {
   border: 1px #eee solid;
   margin-bottom: 5px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.1);
   padding: 5px;
 }
 .files__image {
@@ -111,8 +109,7 @@
 }
 .is-text-box {
   border: 1px #eee solid;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 .is-text-image {
   width: 25px;

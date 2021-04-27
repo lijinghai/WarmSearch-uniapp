@@ -39,8 +39,7 @@
 .corMethod ._li {
   margin: 0 5px;
   padding: 4px 8px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   font-size: 16px;
   border: 1px solid #ccc;
 }
