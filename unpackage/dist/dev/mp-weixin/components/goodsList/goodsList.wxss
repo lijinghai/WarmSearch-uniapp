@@ -40,8 +40,7 @@
   width: 355rpx;
   margin: 10rpx 0;
   padding: 15rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .goods_list .goods_item image {
   width: 80%;

@@ -146,14 +146,14 @@ var _default =
 {
   data: function data() {
     return {
-      longitude: 116.946183, //经度
-      latitude: 30.816133, //纬度
+      longitude: 118.798656, //经度
+      latitude: 32.076794, //纬度
       scale: 16, //设置地图的缩放级别
       markers: [
       {
-        longitude: 116.946183, //经度
-        latitude: 30.816133, //纬度
-        iconPath: '../../static/imgDemo/tcLogo.png',
+        longitude: 118.798656, //经度
+        latitude: 32.076794, //纬度
+        iconPath: '../../static/imgDemo/xuanwuhu.jpg',
         width: 30,
         height: 30 }] };
 
@@ -163,7 +163,7 @@ var _default =
   methods: {
     phone: function phone() {
       uni.makePhoneCall({
-        phoneNumber: '15380408957' });
+        phoneNumber: '152*******12' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

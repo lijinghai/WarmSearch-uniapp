@@ -38,8 +38,7 @@ page {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #efeff4;
   min-height: 100%;
   height: auto;
@@ -121,8 +120,7 @@ view {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
-  -webkit-border-radius: 6px;
-          border-radius: 6px;
+  border-radius: 6px;
   height: 48px;
   margin: 15px;
   background-color: #007AFF;
