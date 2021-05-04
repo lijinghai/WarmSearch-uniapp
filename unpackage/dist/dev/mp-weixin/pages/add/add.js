@@ -98,7 +98,7 @@ var components
 try {
   components = {
     uniFilePicker: function() {
-      return Promise.all(/*! import() | uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker.vue */ 92))
+      return Promise.all(/*! import() | uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker.vue */ 41))
     }
   }
 } catch (e) {
@@ -155,7 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var tabarHead = function tabarHead() {__webpack_require__.e(/*! require.ensure | components/tabarHead */ "components/tabarHead").then((function () {return resolve(__webpack_require__(/*! @/components/tabarHead.vue */ 105));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var PubClassify = function PubClassify() {Promise.all(/*! require.ensure | components/publish/pubClassify */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/publish/pubClassify")]).then((function () {return resolve(__webpack_require__(/*! @/components/publish/pubClassify.vue */ 112));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var tabarHead = function tabarHead() {__webpack_require__.e(/*! require.ensure | components/tabarHead */ "components/tabarHead").then((function () {return resolve(__webpack_require__(/*! @/components/tabarHead.vue */ 112));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var PubClassify = function PubClassify() {Promise.all(/*! require.ensure | components/publish/pubClassify */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/publish/pubClassify")]).then((function () {return resolve(__webpack_require__(/*! @/components/publish/pubClassify.vue */ 128));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
