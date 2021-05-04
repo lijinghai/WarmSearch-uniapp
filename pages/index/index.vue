@@ -8,13 +8,17 @@
 				<image :src="item.imgUrl"></image>
 			</swiper-item>
 		</swiper>
-		
+	
 		<!-- 寻物有我 -->
 		<view class="hot_goods">
 			<view class="title">寻物有我</view>
+			<!-- 文字滚动 -->
+			<uni-notice-bar showClose="true" showIcon="true" color="#87CEFF" scrollable="true" single="true" text="[通知] 19级张三同学遗失笔记本电脑,如有拾取到同学请速联系他,联系方式:15178***798,重谢!"></uni-notice-bar>
+			
 			<!-- 组件封装 -->
 			<goodsList @goodsItemClick="goGoodsDetatil" :goods="goods"></goodsList>
 		</view>
+		
 		
 	</view>
 </template>
