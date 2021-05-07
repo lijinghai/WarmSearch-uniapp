@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/goodsList/goodsList":1,"components/poiuy-uinput/uinput":1,"components/find-item/find-item":1};
+/******/ 		var cssChunks = {"components/goodsList/goodsList":1,"uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar":1,"uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker":1,"uni_modules/uni-forms/components/uni-forms-item/uni-forms-item":1,"uni_modules/uni-forms/components/uni-forms/uni-forms":1,"components/poiuy-uinput/uinput":1,"components/find-item/find-item":1,"uni_modules/uni-icons/components/uni-icons/uni-icons":1,"uni_modules/uni-file-picker/components/uni-file-picker/upload-file":1,"uni_modules/uni-file-picker/components/uni-file-picker/upload-image":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/goodsList/goodsList":"components/goodsList/goodsList","components/poiuy-uinput/uinput":"components/poiuy-uinput/uinput","components/find-item/find-item":"components/find-item/find-item"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/goodsList/goodsList":"components/goodsList/goodsList","uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar":"uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar","uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker":"uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker","uni_modules/uni-forms/components/uni-forms-item/uni-forms-item":"uni_modules/uni-forms/components/uni-forms-item/uni-forms-item","uni_modules/uni-forms/components/uni-forms/uni-forms":"uni_modules/uni-forms/components/uni-forms/uni-forms","components/poiuy-uinput/uinput":"components/poiuy-uinput/uinput","components/find-item/find-item":"components/find-item/find-item","uni_modules/uni-icons/components/uni-icons/uni-icons":"uni_modules/uni-icons/components/uni-icons/uni-icons","uni_modules/uni-file-picker/components/uni-file-picker/upload-file":"uni_modules/uni-file-picker/components/uni-file-picker/upload-file","uni_modules/uni-file-picker/components/uni-file-picker/upload-image":"uni_modules/uni-file-picker/components/uni-file-picker/upload-image"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

@@ -21,8 +21,21 @@
 				</uinput>
             </uni-forms-item>
             <uni-forms-item label="图片" name="email">
-                <input class="input" v-model="formData.email" type="text" placeholder="请输入用户名" @input="binddata('email',$event.detail.value)" />
-            </uni-forms-item>
+                <!-- <input class="input" v-model="formData.email" type="text" placeholder="请输入用户名" @input="binddata('email',$event.detail.value)" /> -->
+      
+			
+			</uni-forms-item>
+			
+			<uni-file-picker
+			    v-model="imageValue" 
+			    fileMediatype="image" 
+			    mode="grid" 
+			    @select="select" 
+			    @progress="progress" 
+			    @success="success" 
+			    @fail="fail" 
+			/>
+			
             <button @click="submit">Submit</button>
         </uni-forms>
 
@@ -37,6 +50,7 @@
 		},
 		data() {
 			return {
+				imageValue:[],
 				test: '',
 				test2: '',
 				tel: '',
