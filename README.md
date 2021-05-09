@@ -32,12 +32,13 @@
 
 ### 项目技术栈 :star:
 
-- PC端:Vue+Element-iu
 
-* 小程序: Uni-app/微信小程序
-* 后端: Java/SpringBoot/MySQL/Swagger/MybatisPlus/Json Web Tokens
-
-#### 项目地址 :link:
+- PC端（WarmSearch-PC)：`Vue 2.0`+`Vue-router`+`Vuex`+`Element-ui`+`Axios`
+- 后台管理系统(WarmSearch-Web)：基于Vue-admin-ui脚手架
+- 微信小程序(WarmSearch-uniapp)：uni-app + Vue.js
+- 后端(WarmSearch)：Springboot 2.4.2 + Java Web Token +MybatisPlus + Swagger 
+- 数据库：MySql 5.7
+### 项目地址 :link:
 
 项目采用前后端分离开发模式，PC端使用:Vue + Element-ui, 小程序使用Uni-app开发，后端数据API采用Java、Spring-Boot开发.
 
@@ -49,9 +50,9 @@ PC端Code地址：https://github.com/Dorian1015/WarmSearch-PC
 
 web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
-#### 体验地址
+### 体验地址
 
-由于项目还在不断完善中所有，目前还未上线；
+由于项目还在不断完善中，所以目前还未上线；
 
 主要还是因为穷，买不起服务器
 
@@ -87,7 +88,7 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 - 总体架构![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/clip_image002.jpg)
 
-  系统设计秉承“前后端分离/SOA”的总体思想，前端使用Vue/ElementUI作为主要框架技术、Nginx作为HTTP服务器，用来提供静态页面访问服务和反向代理作用；后端则以Springboot主流框架技术为主、采用MySQL开源数据库，前后端使用Restful规范交换数据。 
+  系统设计秉承“前后端分离/SOA”的总体思想，前端使用Vue/ElementUI作为主要框架技术、Nginx作为HTTP服务器，用来提供静态页面访问服务和反向代理作用；后端则以Springboot主流框架技术为主、采用MySQL开源数据库，前后端使用Restful规范交换数据。
 
   系统采用JWT令牌鉴权方式，降低服务器运行消耗，提升系统的伸缩性和扩展性。
 
@@ -105,9 +106,6 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 ## 功能模块
 
-
-
-## 运行项目
 
 #### 1.前台页面展示（WarmSearch-PC)
 
