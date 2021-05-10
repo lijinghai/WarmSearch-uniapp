@@ -3,7 +3,6 @@
 
         <uni-forms ref="form" :value="formData" :rules="rules">
             <uni-forms-item label="个人信息" name="name">
-                <!-- <uinput type="text" v-model="formData.name" placeholder="请输入姓名" /> -->
 				<uinput name="input" label="物品名称" v-model="test2" inputBorder="bottom" borderAnimation="center"
 					placeholder="请输入物品名称">
 				</uinput>
