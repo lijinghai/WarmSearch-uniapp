@@ -8,7 +8,8 @@
     "pages/goods-detail/goods-detail",
     "pages/finds-detail/finds-detail",
     "pages/about-me/about-me",
-    "pages/upload-lost/upload-lost"
+    "pages/upload-lost/upload-lost",
+    "pages/login/index"
   ],
   "subPackages": [],
   "window": {

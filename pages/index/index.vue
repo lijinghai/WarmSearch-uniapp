@@ -33,8 +33,24 @@
 			}
 		},
 		onLoad() {
+			//用户一进页面就登录
+			var res = global.isLogin();
+			if(!res){
+				uni.showModal({
+					title:'提醒',
+					content:'请登录',
+					success:function(){
+						uni.navigateTo({
+							url:"/pages/login/index"
+						})
+					},
+				});
+			}
+			
+			
 			this.getSwipers()
 			this.getHotGoods()
+			
 		},
 		components: {"goodsList":goodsList},
 		methods: {
