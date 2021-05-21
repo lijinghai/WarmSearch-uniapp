@@ -1,5 +1,5 @@
 {
-    "name" : "WarmSearch",
+    "name" : "失物招领",
     "appid" : "__UNI__672D8A0",
     "description" : "",
     "versionName" : "1.0.0",
@@ -52,6 +52,18 @@
                         "appsecret" : "9bb70478f2450c04b869acc5316bca3a",
                         "UniversalLinks" : ""
                     }
+                },
+                "ad" : {}
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "D:/Dorian/图标/lost.png"
+                }
+            },
+            "splashscreen" : {
+                "androidStyle" : "default",
+                "android" : {
+                    "hdpi" : "D:/图片/IUk.png"
                 }
             }
         }

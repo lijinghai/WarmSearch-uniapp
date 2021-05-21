@@ -12,9 +12,9 @@
 /* 10 */,
 /* 11 */,
 /* 12 */
-/*!*********************************************************************************************!*\
-  !*** D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/main.js?{"page":"pages%2Findex%2Findex"} ***!
-  \*********************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27,9 +27,9 @@ createPage(_index.default);
 
 /***/ }),
 /* 13 */
-/*!**************************************************************************!*\
-  !*** D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue ***!
-  \**************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -67,9 +67,9 @@ component.options.__file = "pages/index/index.vue"
 
 /***/ }),
 /* 14 */
-/*!*********************************************************************************************************!*\
-  !*** D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=template&id=57280228& ***!
-  \*********************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \*************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -88,9 +88,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 15 */
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=template&id=57280228& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,10 +104,10 @@ var components
 try {
   components = {
     uniNoticeBar: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar */ "uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue */ 87))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar */ "uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue */ 91))
     },
     goodsList: function() {
-      return __webpack_require__.e(/*! import() | components/goodsList/goodsList */ "components/goodsList/goodsList").then(__webpack_require__.bind(null, /*! @/components/goodsList/goodsList.vue */ 94))
+      return __webpack_require__.e(/*! import() | components/goodsList/goodsList */ "components/goodsList/goodsList").then(__webpack_require__.bind(null, /*! @/components/goodsList/goodsList.vue */ 98))
     }
   }
 } catch (e) {
@@ -140,9 +140,9 @@ render._withStripped = true
 
 /***/ }),
 /* 16 */
-/*!***************************************************************************************************!*\
-  !*** D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -155,14 +155,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 17 */
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var goodsList = function goodsList() {__webpack_require__.e(/*! require.ensure | components/goodsList/goodsList */ "components/goodsList/goodsList").then((function () {return resolve(__webpack_require__(/*! ../../components/goodsList/goodsList.vue */ 94));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var goodsList = function goodsList() {__webpack_require__.e(/*! require.ensure | components/goodsList/goodsList */ "components/goodsList/goodsList").then((function () {return resolve(__webpack_require__(/*! ../../components/goodsList/goodsList.vue */ 98));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -198,18 +198,18 @@ __webpack_require__.r(__webpack_exports__);
   },
   onLoad: function onLoad() {
     //用户一进页面就登录
-    var res = global.isLogin();
-    if (!res) {
-      uni.showModal({
-        title: '提醒',
-        content: '请登录',
-        success: function success() {
-          uni.navigateTo({
-            url: "/pages/login/index" });
-
-        } });
-
-    }
+    // var res = global.isLogin();
+    // if(!res){
+    // 	uni.showModal({
+    // 		title:'提醒',
+    // 		content:'请登录',
+    // 		success:function(){
+    // 			uni.navigateTo({
+    // 				url:"/pages/login/index"
+    // 			})
+    // 		},
+    // 	});
+    // }
 
 
     this.getSwipers();
@@ -241,16 +241,16 @@ __webpack_require__.r(__webpack_exports__);
 
       console.log(id);
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../HBuilderX/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ 3), __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 18 */,
 /* 19 */,
 /* 20 */,
 /* 21 */
-/*!************************************************************************************************************!*\
-  !*** D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=style&index=0&lang=scss& ***!
-  \************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=style&index=0&lang=scss& ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -263,9 +263,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 22 */
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/Desktop/大创/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=style&index=0&lang=scss& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/Desktop/失物招领网站/Code/uni-app/WarmSearch-uniapp/pages/index/index.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
