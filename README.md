@@ -152,9 +152,15 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 #### 3.后台管理系统(WarmSearch-web)
 
-- #### 部分页面展示
+- #### 登录页面展示
 
 ![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/image-20210327003533589.png)
+
+- #### 首页页面展示
+
+![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/后台首页.jpg)
+
+- #### 部分功能页面展示
 
 ![img](https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/失物招领.assets/后端页面.png)
 
@@ -172,10 +178,4 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 ### 如果你能看到这里说明你肯定对我的项目感兴趣，那么请访问我的博客吧，里面会更新更详细的关于我这个项目的信息 [博客](https://dorian1015.github.io/)
 
 ### 或者你也可以通过我的[Github](https://github.com/Dorian1015) 首页的邮箱来联系我 lijinghailjh@163.com
-
-
-
-
-
-
 
