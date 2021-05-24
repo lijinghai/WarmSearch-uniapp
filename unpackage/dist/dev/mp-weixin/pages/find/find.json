@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "寻失主",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "find-item": "/components/find-item/find-item"
-  }
-}
