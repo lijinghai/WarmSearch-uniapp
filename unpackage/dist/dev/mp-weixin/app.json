@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/index",
     "pages/index/index",
     "pages/lost/lost",
     "pages/add/add",
@@ -9,7 +10,10 @@
     "pages/finds-detail/finds-detail",
     "pages/about-me/about-me",
     "pages/upload-lost/upload-lost",
-    "pages/login/index"
+    "pages/register/register",
+    "pages/forget/forget",
+    "pages/agree/agree",
+    "pages/hideAgree/hideAgree"
   ],
   "subPackages": [],
   "window": {
@@ -54,6 +58,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

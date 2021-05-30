@@ -1,3 +1,35 @@
+.demo-uni-row {
+  margin-bottom: 10px;
+  /* QQ、字节小程序文档写有 :host，但实测不生效 */
+  /* 百度小程序没有 :host，需要设置block */
+}
+/* 支付宝小程序没有 demo-uni-row 层级 */
+/* 微信小程序使用了虚拟化节点，没有 demo-uni-row 层级 */
+ .uni-row {
+  margin-bottom: 10px;
+}
+.demo-uni-col {
+  height: 36px;
+  border-radius: 4px;
+}
+.dark_deep {
+  background-color: #99a9bf;
+}
+.dark {
+  background-color: #d3dce6;
+}
+.light {
+  background-color: #e5e9f2;
+}
+.example-body {
+  padding: 0px 12px;
+  background-color: #FFFFFF;
+}
+.result-box {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 16px;
+}
 .box {
   width: 100vw;
   display: -webkit-box;
