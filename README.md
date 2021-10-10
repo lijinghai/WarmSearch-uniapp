@@ -178,6 +178,14 @@ web管理端code地址: https://github.com/Dorian1015/WarmSearch-Web
 
 
 
+|              这是我的微信，如果有需求可以联系我              |                           ੭ ᐕ)੭*⁾⁾                           |                          ╰(*´︶`*)╯                          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/me/微信二维码.jpg" style="zoom:200%;" /> | <img src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/me/微信.jpg" style="zoom: 25%;" /> | <img src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/me/支付宝.jpg" style="zoom: 25%;" /> |
+|         这是我的邮箱是 lijinghailjh@163.com 欢迎指点         |                                                              |                                                              |
+
+
+
+
 
 ### 如果你能看到这里说明你肯定对我的项目感兴趣，那么请访问我的博客吧，里面会更新更详细的关于我这个项目的信息 [博客](https://dorian1015.github.io/)
 
