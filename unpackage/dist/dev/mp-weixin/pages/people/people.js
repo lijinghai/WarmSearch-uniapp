@@ -471,7 +471,7 @@ var _default =
     // 获取用户id====>根据id获取信息
     getinfoid: function getinfoid() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var opts;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                 opts = {
-                  url: '/pcuser/info?token=' + uni.getStorageSync('token'),
+                  url: '/suser/info?token=' + uni.getStorageSync('token'),
                   method: 'GET' };
 
                 uni.showLoading({

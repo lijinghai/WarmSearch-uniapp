@@ -11,7 +11,17 @@
     "pages/about-me/about-me",
     "pages/forget/forget",
     "pages/agree/agree",
-    "pages/hideAgree/hideAgree"
+    "pages/hideAgree/hideAgree",
+    "pages/me/salary",
+    "pages/me/aboutMe",
+    "pages/me/mentalTest/list",
+    "pages/me/mentalTest/index",
+    "pages/me/mentalTest/explain",
+    "pages/me/course",
+    "pages/signOut/signOut",
+    "pages/signOut/success",
+    "pages/setting/userdetail",
+    "pages/setting/useredit"
   ],
   "subPackages": [],
   "window": {
@@ -59,6 +69,5 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom",
     "tn-custom": "/components/TnCustom/TnCustom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

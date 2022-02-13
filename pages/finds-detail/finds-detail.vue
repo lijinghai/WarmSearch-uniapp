@@ -1,4 +1,10 @@
 <template>
+	<view>
+		
+	<cu-custom bgColor="bg-gradual-blue" :isBack="true">
+		<block slot="backText">返回</block>
+		<block slot="content">物品详情</block>
+	</cu-custom>
 	<view class="goods_detail">
 		<!-- 轮播图 -->
 		<swiper indicator-dots="true">
@@ -28,6 +34,7 @@
 		</view>
 		<view class="line"></view>
 
+	</view>
 	</view>
 </template>
 

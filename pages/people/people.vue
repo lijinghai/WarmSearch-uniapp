@@ -339,7 +339,7 @@
 			// 获取用户id====>根据id获取信息
 			async getinfoid(){
 				let opts = {
-					url: '/pcuser/info?token='+ uni.getStorageSync('token'),
+					url: '/suser/info?token='+ uni.getStorageSync('token'),
 					method: 'GET'
 				};
 				uni.showLoading({
