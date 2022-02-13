@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/login/index",
+    "pages/login/login",
     "pages/index/index",
     "pages/lost/lost",
     "pages/add/add",
@@ -17,10 +17,10 @@
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "暖寻",
-    "navigationBarBackgroundColor": "#87CEFF",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#0081ff",
+    "navigationBarTitleText": "lijinghai",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#87CEFF",
@@ -58,5 +58,8 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
+    "tn-custom": "/components/TnCustom/TnCustom"
+  }
 }

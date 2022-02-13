@@ -25,12 +25,9 @@
 /* 透明度 */
 /* 文章场景相关 */
 .uni-file-picker__container {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: -5px;
 }
 .file-picker__box {
@@ -63,15 +60,9 @@
   width: 100%;
 }
 .file-picker__mask {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   right: 0;
   top: 0;
@@ -86,15 +77,9 @@
   height: 100%;
 }
 .is-add {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .icon-add {
   width: 50px;
@@ -108,15 +93,9 @@
           transform: rotate(90deg);
 }
 .icon-del-box {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 5px;
   right: 5px;

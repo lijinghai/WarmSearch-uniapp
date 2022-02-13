@@ -26,14 +26,9 @@
 /* 文章场景相关 */
 .goods_list {
   padding: 0 15rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .goods_list .goods_item {
   background: #fff;
