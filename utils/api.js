@@ -24,12 +24,8 @@ export const  myRequest = (options)=>{
 	})
 }
 
-/* myRequest({
-	url: '/unbo',
-	method: 'POST',
-	data:{
-		
-	}
-}) */
-
+export default {
+	BASE_URL,
+	myRequest
+}
 

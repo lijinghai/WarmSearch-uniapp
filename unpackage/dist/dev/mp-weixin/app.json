@@ -10,7 +10,6 @@
     "pages/finds-detail/finds-detail",
     "pages/about-me/about-me",
     "pages/upload-lost/upload-lost",
-    "pages/register/register",
     "pages/forget/forget",
     "pages/agree/agree",
     "pages/hideAgree/hideAgree"
@@ -61,5 +60,6 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom",
     "tn-custom": "/components/TnCustom/TnCustom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

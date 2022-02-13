@@ -25,7 +25,7 @@
 				<view class="text-center" :style="[{animation: 'show ' + 0.4+ 's 1'}]">
 					<image src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/custom/tuxiang.jpg" mode='aspectFit'
 						class="zai-logo "></image>
-					<view class="zai-title text-shadow ">医 依</view>
+					<view class="zai-title text-shadow ">失物招领</view>
 
 					<!-- 欢迎登录 -->
 					<view class="cu-bar ">
@@ -44,14 +44,13 @@
 						<!-- 账号输入框 -->
 						<view class="cu-form-group margin-top  shadow-warp" :class="[shape=='round'?'round':'']">
 							<view class="title"><text class="cuIcon-people margin-right-xs"></text>账号:</view>
-							<input placeholder="请输入账号" name="input" v-model="user.username"></input>
+							<input placeholder="请输入账号" name="input" v-model="username"></input>
 						</view>
 
 						<!-- 密码输入框 -->
 						<view class="cu-form-group margin-top shadow-warp" :class="[shape=='round'?'round':'']">
 							<view class="title"><text class="cuIcon-lock margin-right-xs"></text>密码:</view>
-							<input class="uni-input" placeholder="请输入密码" :password="!showPassword"
-								v-model="user.password" />
+							<input class="uni-input" placeholder="请输入密码" :password="!showPassword" v-model="password" />
 							<view class="action text-lg">
 								<text :class="[showPassword ? 'cuIcon-attention' : 'cuIcon-attentionforbid']"
 									@click="changePassword"></text>
@@ -65,12 +64,10 @@
 									space="emsp">{{loading ? "登录中...":" 登录 "}}</text>
 							</button>
 							<button class="cu-btn line-blue lg margin-left shadow" :loading="loading"
-								:class="[shape=='round'?'round':'']" @tap="loginWay=3-loginWay">短信注册
+								:class="[shape=='round'?'round':'']" @tap="loginWay=3-loginWay">号码注册
 							</button>
 						</view>
 
-						<!-- 找回密码 -->
-						<!-- <view style="right: 0rpx;">找回密码</view> -->
 					</block>
 
 
@@ -93,16 +90,6 @@
 									@click="changePassword"></text>
 							</view>
 						</view>
-
-						<!-- 验证码输入框 -->
-						<!-- <view class="cu-form-group margin-top shadow-warp" :class="[shape=='round'?'round':'']">
-							<view class="title"><text class="cuIcon-lock margin-right-xs"></text>密码:</view>
-							<input class="uni-input" placeholder="请输入验证码" v-model="smsCode" />
-							<view class="action">
-								<button class="cu-btn line-blue sm" :disabled="!isSendSMSEnable" @click="onSMSSend">
-									{{ getSendBtnText }}</button>
-							</view>
-						</view> -->
 						<!-- <view>未注册的手机号验证后自动创建账号</view> -->
 
 						<!-- 登录按钮 -->
@@ -138,7 +125,7 @@
 			<!-- QQ、微信登录按钮 -->
 			<view class="buttom">
 				<view class="loginType">
-					<!-- <view class="wechat item">
+					<view class="wechat item">
 						<view class="icon">
 							<u-icon size="70" name="weixin-fill" color="rgb(83,194,64)"></u-icon>
 						</view>
@@ -149,7 +136,7 @@
 							<u-icon size="70" name="qq-fill" color="rgb(17,183,233)"></u-icon>
 						</view>
 						QQ
-					</view> -->
+					</view>
 				</view>
 				<view class="hint">
 					登录代表同意
@@ -165,6 +152,7 @@
 </template>
 
 <script>
+	import request from '@/utils/myRequest.js';
 	// import { ACCESS_TOKEN,USER_NAME,USER_INFO } from "@/common/util/constants"
 	import {
 		mapActions
@@ -183,23 +171,18 @@
 			return {
 				tip: '点击「添加小程序」，下次访问更便捷',
 				duration: 1,
-				
+				user: {
+					username: '',
+					password: ''
+				},
 				info: {
 					bladderCapacity: '500.0',
 					bladderDetrusorPressure: '1.0',
 					bladderCompliance: '1.0'
 				},
-				// 获取用户id
-				infoid: {
-					id: ''
-				},
-				user: {
-					username: '',
-					password: ''
-				},
 				shape: '', //round 圆形
 				loading: false,
-				userName: '1',
+				username: '1',
 				password: '1',
 				phoneNo: '',
 				smsCode: '',
@@ -240,10 +223,10 @@
 				}
 			},
 			canSMSLogin() {
-				return this.user.username.length > 4 && this.smsCode.length > 4;
+				return this.username.length > 4 && this.smsCode.length > 4;
 			},
 			canPwdLogin() {
-				return this.user.username.length > 4 && this.user.password.length > 4;
+				return this.username.length > 4 && this.password.length > 4;
 			},
 		},
 		methods: {
@@ -251,36 +234,36 @@
 
 			// 账号密码登录请求
 			onLogin: function() {
-				if (!this.user.username || this.user.username.length == 0) {
+				if (!this.username || this.username.length == 0) {
 					this.$tip.toast('请填写用户名');
 					return;
 				}
-				if (!this.user.password || this.user.password.length == 0) {
+				if (!this.password || this.password.length == 0) {
 					this.$tip.toast('请填写密码');
 					return;
 				}
 				let loginParams = {
-					username: this.user.username,
-					password: this.user.password
+					username: this.username,
+					password: this.password
 				}
 				this.loading = true;
 
 				const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
 				console.log("表单提交")
-
-				// 登录跳转
-				this.$myRequest({
+				let opts = {
 					url: '/pcuser/login',
 					method: 'POST',
-					data: loginParams, // 发送的数据
+				};
+				let data = loginParams;
 
-				}).then((res) => {
+				this.$httpRequest(opts, data).then((res) => {
 					console.log(res)
 					this.loading = false;
 					if (res.data.code === 20000) { // 获取数据成功
 						console.log("成功")
 						uni.setStorageSync('token', res.data.data.token); // 将登录信息以token的方式存在手机硬盘中
-						console.log("token====>" + res.data.data.token)
+
+						console.log("token" + res.data.data.token)
 						uni.switchTab({
 							url: '../index/index'
 						})
@@ -288,7 +271,8 @@
 					} else if (res.data.code === 500) { // 获取数据失败
 						console.log("失败")
 						this.loading = false;
-						this.$tip.alert(res.data.message);
+						// this.$tip.alert(res.data.message);
+						this.$tip.alert("账号或密码错误");
 					}
 				}).catch((err) => {
 					let msg = "请求出现错误，请稍后再试"
@@ -296,7 +280,8 @@
 					this.$tip.alert(msg);
 				}).finally(() => {
 					this.loading = false;
-				})
+				});
+
 
 			},
 
@@ -320,7 +305,6 @@
 			changePassword() {
 				this.showPassword = !this.showPassword;
 			},
-
 			// 手机号注册
 			onSMSSend() {
 				let smsParams = {};
@@ -344,7 +328,6 @@
 					}
 				}, 1000);
 			},
-			// 手机号注册
 			onSMSLogin() {
 				let checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
 
@@ -360,40 +343,60 @@
 					this.$tip.toast('请填密码');
 					return;
 				}
-
 				let loginParams = {
 					username: this.user.username,
 					password: this.user.password
-				}
-				this.loading = true;
-
-				const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
-				console.log("表单提交")
-
-				// 注册跳转
-				this.$myRequest({
-					url: '/pcuser/add',
-					method: 'POST',
-					data: loginParams, // 发送的数据
-
-				}).then((res) => {
-					console.log(res)
+				};
+			this.loading = true;
+			
+			const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
+			console.log("表单提交")
+			let opts = {
+				url: '/pcuser/add',
+				method: 'POST',
+			};
+			let data = loginParams;
+			
+			this.$httpRequest(opts, data).then((res) => {
+				console.log(res)
+				this.loading = false;
+				if (res.data.code === 20000) { // 获取数据成功
+					console.log("成功")
+					uni.setStorageSync('token', res.data.data.token); // 将登录信息以token的方式存在手机硬盘中
+			
+					console.log("token" + res.data.data.token)
+					uni.switchTab({
+						url: '../index/index'
+					})
+					this.$tip.success('注册成功!')
+				} else if (res.data.code === 500) { // 获取数据失败
+					console.log("失败")
 					this.loading = false;
-					if (res.data.code === 20000) { // 获取数据成功
-						console.log("成功")
-						uni.setStorageSync('token', res.data.data.token); // 将登录信息以token的方式存在手机硬盘中
-						// page.onLoad();
-						this.$tip.success('注册成功!')
-						this.infoid = res.data.data
-
-					} else if (res.data.code === 500) { // 获取数据失败
-						console.log("失败")
-						this.loading = false;
-						this.$tip.alert(res.data.message);
-					}
-				})
+					this.$tip.alert(res.data.message);
+				}
+			}).catch((err) => {
+				let msg = "请求出现错误，请稍后再试"
+				this.loading = false;
+				this.$tip.alert(msg);
+			}).finally(() => {
+				this.loading = false;
+			});
+					
+				// this.PhoneLogin(loginParams).then((res) => {
+				// 	console.log("res====》", res)
+				// 	if (res.data.success) {
+				// 		this.$tip.success('登录成功!')
+				// 		this.$Router.replaceAll({
+				// 			name: 'index'
+				// 		})
+				// 	} else {
+				// 		this.$tip.error(res.data.message);
+				// 	}
+				// }).catch((err) => {
+				// 	let msg = ((err.response || {}).data || {}).message || err.data.message || "请求出现错误，请稍后再试"
+				// 	this.$tip.error(msg);
+				// });
 			},
-
 			loginSuccess() {
 				// 登陆成功，重定向到主页
 				this.$Router.replace({
