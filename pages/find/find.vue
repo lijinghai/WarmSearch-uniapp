@@ -1,6 +1,11 @@
 <template>
 	<view>
+		<cu-custom bgColor="bg-gradual-blue" :isBack="false">
+			<block slot="content">寻失主</block>
+		</cu-custom>
+	<view>
 		<find-item @itemClick="goDetail" :list="findlist"></find-item>
+	</view>
 	</view>
 </template>
 

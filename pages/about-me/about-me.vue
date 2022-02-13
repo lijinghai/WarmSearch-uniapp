@@ -1,4 +1,9 @@
 <template>
+	<view>
+		<cu-custom bgColor="bg-gradual-blue" :isBack="true">
+			<block slot="backText">返回</block>
+			<block slot="content">关于我们</block>
+		</cu-custom>
 	<view class="contact">
 		<image class="img" src="../../static/imgDemo/lianxime.png"></image>
 		<view class="info">
@@ -7,6 +12,7 @@
 		</view>
 		<!-- 地图 -->
 		<map class="map" :longitude="longitude" :scale="scale" :latitude="latitude" :markers="markers"></map>
+	</view>
 	</view>
 </template>
 

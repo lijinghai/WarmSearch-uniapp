@@ -1,5 +1,9 @@
 <template>
 	<view>
+		<cu-custom bgColor="bg-gradual-blue" :isBack="false">
+			<block slot="content">认领/招领物品</block>
+		</cu-custom>
+	<view>
 
         <uni-forms ref="form" :value="formData" :rules="rules">
             <uni-forms-item label="个人信息" name="name">
@@ -38,6 +42,7 @@
             <button @click="submit">Submit</button>
         </uni-forms>
 
+	</view>
 	</view>
 </template>
 

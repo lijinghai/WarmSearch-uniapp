@@ -251,7 +251,7 @@
 				const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
 				console.log("表单提交")
 				let opts = {
-					url: '/pcuser/login',
+					url: '/suser/login',
 					method: 'POST',
 				};
 				let data = loginParams;
@@ -352,7 +352,7 @@
 			const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
 			console.log("表单提交")
 			let opts = {
-				url: '/pcuser/add',
+				url: '/suser/add',
 				method: 'POST',
 			};
 			let data = loginParams;

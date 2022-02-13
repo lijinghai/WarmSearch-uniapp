@@ -11,16 +11,14 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "暖寻",
-				"enablePullDownRefresh": true
+		
 			}
 		}
 	    ,{
             "path" : "pages/lost/lost",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "寻失物",
-                "enablePullDownRefresh": true
+     
             }
             
         },
@@ -28,8 +26,7 @@
 		    "path" : "pages/add/add",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "发布信息",
-		        "enablePullDownRefresh": true
+
 		    }
 		    
 		}
@@ -37,8 +34,7 @@
             "path" : "pages/find/find",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "寻失主",
-                "enablePullDownRefresh": true
+
             }
             
         }
@@ -46,8 +42,7 @@
             "path" : "pages/people/people",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "个人中心",
-                "enablePullDownRefresh": true
+
             }
             
         }
@@ -55,8 +50,7 @@
             "path" : "pages/goods-detail/goods-detail",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "物品详细信息",
-                "enablePullDownRefresh": false
+  
             }
             
         }
@@ -64,8 +58,7 @@
             "path" : "pages/finds-detail/finds-detail",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "待招领物品",
-                "enablePullDownRefresh": false
+
             }
             
         }
@@ -73,41 +66,28 @@
             "path" : "pages/about-me/about-me",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "关于我们",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/upload-lost/upload-lost",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "发表寻物启事",
-                "enablePullDownRefresh": false
+
             }
             
         },
 		{
 			"path": "pages/forget/forget",
 			"style": {
-				"navigationBarTitleText": "忘记密码",
-				"enablePullDownRefresh": true
+
 			}
 		
 		},
 		{
 			"path": "pages/agree/agree",
 			"style": {
-				"navigationBarTitleText": "用户协议",
-				"enablePullDownRefresh": true
+
 			}
 		
 		},
 		{
 			"path": "pages/hideAgree/hideAgree",
 			"style": {
-				"navigationBarTitleText": "用户隐私协议",
-				"enablePullDownRefresh": true
+
 			}
 		
 		}
