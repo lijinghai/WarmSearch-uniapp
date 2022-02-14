@@ -30,7 +30,6 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "useIsolateContext": true,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
@@ -39,6 +38,7 @@
     "disableUseStrict": false,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true,
     "minifyWXML": true
   },
   "compileType": "miniprogram",

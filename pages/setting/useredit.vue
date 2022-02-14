@@ -42,7 +42,7 @@
 			
 			<view class="cu-form-group margin-top">
 				<view class="title">手机号码</view>
-				<input placeholder="输入手机号码" name="input" v-model="info.username"></input>
+				<input placeholder="输入手机号码" name="input" maxlength="11"v-model="info.username"></input>
 				<view class="cu-capsule radius">
 					<view class='cu-tag bg-blue '>
 						+86
@@ -149,12 +149,40 @@
 					url: '/suser/info?token=' + uni.getStorageSync('token')
 					// url: '/uniappuser/id?limit=1&page=1&sort=1&id='+ this.infoid.id
 				})
-				this.info = res.data.data
-				console.log("res==>" + this.info.id)
-				if (res.data.data != null) {
-					let result = res.data.data
-					this.info.name = result.name == null ? '用户' : result.name
+				this.infoid = res.data.data
+				console.log("用户id==>"+this.infoid.id)
+				if(res.data.data != null) {
+					console.log("进来了")
+					const res1 = await this.$myRequest({
+						url: '/suser/id?limit=1&page=1&sort=1&id='+ this.infoid.id
+					})
+					console.log("用户详情信息")
+					this.info = res1.data.data.items[0]
+					console.log(res1.data.data.items[0])
+					if (res1.data.data.items[0] != null) {
+						let result = res1.data.data.items[0]
+						console.log("result.sex")
+						console.log(result.sex)
+						console.log(result.sex === 1)
+						this.info.name = result.name == null ? '用户' : result.name
+						// this.info.sex = result.sex === 1 ? '男' : '女'
+						this.switchC = result.sex == 1 ? true : false
+						// if(result.sex === 1){
+						// 	this.switchC == true
+						// }else if(result.sex === 2) {
+						// 	this.switchC == false
+						// }
+						this.info.username = result.username == null ? '无' : result.username
+						this.info.birthday = result.birthday == null ? '无' : result.birthday
+						this.info.account = result.account == null ? '无' : result.account
+						this.info.mobile = result.mobile == null ? '无' : result.mobile
+						this.info.email = result.email == null ? '无' : result.email
+					}
 				}
+				// if (res.data.data != null) {
+				// 	let result = res.data.data
+				// 	this.info.name = result.name == null ? '用户' : result.name
+				// }
 			},
 
 			
@@ -163,6 +191,14 @@
 			},
 			SwitchC(e) {
 				this.switchC = e.detail.value
+				console.log("11111")
+				console.log(this.switchC)
+				if(this.switchC == true){
+					this.info.sex =1;
+				}else if(this.switchC == false) {
+					this.info.sex =2;
+				}
+				
 			},
 			ChooseImage() {
 				var that=this;
@@ -171,17 +207,24 @@
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['album'], //从相册选择
 					success: (res) => {
-						that.$http.upload(that.$config.apiUrl+that.uploadUrl, {
-								filePath: res.tempFilePaths[0],
-								name: 'file'
-							})
-							.then(res => {
-								that.myFormData.avatar=res.data.message;
-							})
-							.catch(err => {
-								that.$tip.error(err.data.message)
-							});
-						this.imgList = res.tempFilePaths
+								console.log(res)
+						if (this.imgList.length != 0) {
+							this.imgList = this.imgList.concat(res.tempFilePaths)
+						} else {
+							this.imgList = res.tempFilePaths
+						}
+				
+						// that.$http.upload(that.$config.apiUrl+that.uploadUrl, {
+						// 		filePath: res.tempFilePaths[0],
+						// 		name: 'file'
+						// 	})
+						// 	.then(res => {
+						// 		that.myFormData.avatar=res.data.message;
+						// 	})
+						// 	.catch(err => {
+						// 		that.$tip.error(err.data.message)
+						// 	});
+						// this.imgList = res.tempFilePaths
 					}
 				});
 			},
@@ -193,8 +236,8 @@
 			},
 			DelImg(e) {
 				uni.showModal({
-					title: '召唤师',
-					content: '确定要删除这段回忆吗？',
+					title: '主人',
+					content: '确定要删除这张照片吗？',
 					cancelText: '再看看',
 					confirmText: '再见',
 					success: res => {
