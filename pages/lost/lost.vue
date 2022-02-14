@@ -39,7 +39,7 @@
 						<text>{{item.imgname}}</text>
 						<text>{{item.status}}</text>
 						<view class="btnBox">
-							<view @click="getClaim(item.id)" class="evaluate btn">认领</view>
+							<button @click="getClaim(item.id)" class='cu-btn bg-green shadow'>认领</button>
 						</view>
 					</view>
 					<view class="line"></view>
