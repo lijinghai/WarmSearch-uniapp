@@ -17,22 +17,70 @@
 				</swiper-item>
 			</swiper>
 
-			<view class="box1">
-				<view class="dname">
-					<text>{{info.imgname}}</text>
-					<text>{{info.status}}</text>
+			<view
+				class="cu-list menu card-menu margin-top-lg margin-bottom-lg shadow-shop bg-white text-black my-radius sm-border">
+
+				<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
+					<view class='content'>
+						<image src='../../static/me/icon/xiaoxi.png' class='png' mode='aspectFit'></image>
+						<text class='text-lg margin-sm'>物品名称</text>
+					</view>
+					<view class="action">
+						<view>{{info.imgname}}</view>
+					</view>
+					<view class="action">
+						<button class="cu-btn round" :class="['bg-green' , shadow]" @click="getClaim(info.id)">认领</button>
+					</view>
 				</view>
-				<view class="goods_name">{{info.imgdesc}}</view>
-			</view>
 
-			<view class="line"></view>
+				<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
+					<view class='content'>
+						<image src='../../static/me/icon/xiaoxi.png' class='png' mode='aspectFit'></image>
+						<text class='text-lg margin-sm'>物品状态</text>
+					</view>
+					<view class="action">
+						<view>{{info.status}}</view>
+					</view>
+				</view>
+				<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
+					<view class='content'>
+						<image src='../../static/me/icon/xiaoxi.png' class='png' mode='aspectFit'></image>
+						<text class='text-lg margin-sm'>物主姓名</text>
+					</view>
+					<view class="action">
+						<view>{{info.lostname}}</view>
+					</view>
+				</view>
+				<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
+					<view class='content'>
+						<image src='../../static/me/icon/xiaoxi.png' class='png' mode='aspectFit'></image>
+						<text class='text-lg margin-sm'>丢失时间</text>
+					</view>
+					<view class="action">
+						<view>{{info.create_time}}</view>
+					</view>
+				</view>
 
-			<view class="box2">
-				<view>丢失时间:{{info.create_time}}</view>
-				<view>联系人:{{info.lostname}}</view>
-				<view @click="phone">联系方式:{{info.contact}}(点击拨打)</view>
+				<view class="cu-item" @click="phone" data-number="15178672798"
+					:style="[{animation: 'show ' + 0.6+ 's 1'}]">
+					<view class='content'>
+						<image src='../../static/me/icon/dengta.png' class='png' mode='aspectFit'></image>
+						<text class='text-lg margin-sm'>联系方式</text>
+					</view>
+					<view class="action">
+						<view class="cu-tag round bg-blue light">{{info.contact}}</view>
+					</view>
+				</view>
+
+				<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
+					<view class='content' style="height: 290rpx;">
+						<image src='../../static/me/icon/xiaoxi.png' class='png' mode='aspectFit'></image>
+						<text class='text-lg margin-sm'>物品描述: {{info.imgdesc}}
+						</text>
+					</view>
+
+				</view>
 			</view>
-			<view class="line"></view>
 
 		</view>
 	</view>
@@ -53,6 +101,9 @@
 					phoneNumber: '该手机号'
 				})
 			},
+			getClain(id) {
+				console.log(id)
+			},
 			async getSwipers() {
 				const res = await this.$myRequest({
 					url: '/goodsdetail?limit=1&page=1&sort=1&id=' + this.id
@@ -66,6 +117,12 @@
 				})
 				console.log(res)
 				this.info = res.data.data.items[0]
+			},
+			getClaim(id) {
+				console.log(id)
+				uni.navigateTo({
+					url: '/pages/Claim/index?id=' + id
+				})
 			},
 			onLoad(options) {
 				console.log(options)
@@ -87,8 +144,8 @@
 				height: 100%;
 			}
 		}
-	
-	.box1 {
+
+		.box1 {
 			padding: 10px;
 
 			.dname {
@@ -121,5 +178,12 @@
 			width: 750rpx;
 			background: #eee;
 		}
+	}
+	.box {
+		margin: 20upx 0;
+	}
+	
+	.box view.cu-bar {
+		margin-top: 20upx;
 	}
 </style>

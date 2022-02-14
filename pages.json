@@ -127,6 +127,12 @@
 				"navigationBarTitleText": "问题反馈",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/Claim/index",
+			"style": {
+	
+			}
 		}
 
 	],
@@ -159,7 +165,7 @@
 			},
 			{
 				"text": "发布信息",
-				"pagePath": "pages/me/course",
+				"pagePath": "pages/add/add",
 				"iconPath": "static/icon/add.png",
 				"selectedIconPath": "static/icon/active-add.png"
 			},

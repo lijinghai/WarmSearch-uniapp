@@ -19,7 +19,8 @@
     "pages/signOut/success",
     "pages/setting/userdetail",
     "pages/setting/useredit",
-    "pages/problem/index"
+    "pages/problem/index",
+    "pages/Claim/index"
   ],
   "subPackages": [],
   "window": {
@@ -46,7 +47,7 @@
       },
       {
         "text": "发布信息",
-        "pagePath": "pages/me/course",
+        "pagePath": "pages/add/add",
         "iconPath": "static/icon/add.png",
         "selectedIconPath": "static/icon/active-add.png"
       },

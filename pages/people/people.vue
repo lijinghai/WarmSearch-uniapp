@@ -142,9 +142,7 @@
 				</view>
 		
 				<!-- 下：下半部分 -->
-				<view
-					class="cu-list menu card-menu margin-top-lg margin-bottom-lg shadow-shop bg-white text-black my-radius sm-border">
-
+				<view class="cu-list menu card-menu margin-top-lg margin-bottom-lg shadow-shop bg-white text-black my-radius sm-border">
 					<!-- 技术支持 -->
 					<view class="cu-item" @click="callPhoneNumber" data-number="15178672798"
 						:style="[{animation: 'show ' + 0.6+ 's 1'}]">
