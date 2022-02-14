@@ -153,6 +153,36 @@
 						} else {
 							this.imgList = res.tempFilePaths
 						}
+
+						uni.uploadFile({
+							url: this.$BASE_URL.BASE_URL + '/upload',
+							method: 'POST',
+							name: 'file',
+							filePath: res.tempFilePaths[0]
+						}).then((res) => {
+							console.log("res1")
+							console.log(res)
+							this.loading = false;
+							if (res[1].statusCode === 200) { // 获取数据成功
+								console.log("成功")
+								var dataurl = res[1].data
+								console.log(JSON.parse(dataurl).url)
+								this.info1.url = JSON.parse(dataurl).url
+								this.$tip.success('上传成功!')
+							} else if (res[1].statusCode === 500) { // 获取数据失败
+								console.log("失败")
+								this.loading = false;
+								this.$tip.alert(res.data.message);
+							}
+						}).catch((err) => {
+							let msg = "请求出现错误，请稍后再试"
+							this.loading = false;
+							this.$tip.alert(msg);
+						}).finally(() => {
+							this.loading = false;
+						})
+
+
 					}
 				});
 			},
@@ -164,8 +194,8 @@
 			},
 			DelImg(e) {
 				uni.showModal({
-					title: '召唤师',
-					content: '确定要删除这段回忆吗？',
+					title: '主人',
+					content: '确定要删除这张照片吗？',
 					cancelText: '再看看',
 					confirmText: '再见',
 					success: res => {
