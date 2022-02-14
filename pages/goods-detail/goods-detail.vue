@@ -101,9 +101,6 @@
 					phoneNumber: '该手机号'
 				})
 			},
-			getClain(id) {
-				console.log(id)
-			},
 			async getSwipers() {
 				const res = await this.$myRequest({
 					url: '/goodsdetail?limit=1&page=1&sort=1&id=' + this.id

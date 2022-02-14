@@ -4,23 +4,24 @@
 			<block slot="content">寻失物</block>
 		</cu-custom>
 
-	<view class="cu-bar bg-white search fixed" :style="[{top:CustomBar + 'px'}]">
-		<view class="search-form round">
-			<text class="cuIcon-search"></text>
-			<input type="text" v-model="keywords" placeholder="输入搜索的关键词" confirm-type="search" @confirm="searchUserByKey"></input>
+		<view class="cu-bar bg-white search fixed" :style="[{top:CustomBar + 'px'}]">
+			<view class="search-form round">
+				<text class="cuIcon-search"></text>
+				<input type="text" v-model="keywords" placeholder="输入搜索的关键词" confirm-type="search"
+					@confirm="searchUserByKey"></input>
+			</view>
+			<view class="action">
+				<button class="cu-btn bg-gradual-blue shadow-blur round" @tap="searchUserByKey">搜索</button>
+			</view>
 		</view>
-		<view class="action">
-			<button class="cu-btn bg-gradual-blue shadow-blur round" @tap="searchUserByKey">搜索</button>
-		</view>
-	</view>
-		
+
 		<view class="u-search-box">
 			<view class="u-search-inner">
 				<u-icon name="search" color="#909399" :size="28"></u-icon>
 				<text class="u-search-text">搜索您想查找的内容</text>
 			</view>
 		</view>
-	
+
 		<view class="pics">
 			<!-- 可滚动区域 -->
 			<scroll-view scroll-y scroll-with-animation class="left" scroll-y>
@@ -37,6 +38,9 @@
 					<view class="lname">
 						<text>{{item.imgname}}</text>
 						<text>{{item.status}}</text>
+						<view class="btnBox">
+							<view @click="getClaim(item.id)" class="evaluate btn">认领</view>
+						</view>
 					</view>
 					<view class="line"></view>
 					<view class="goods_name">{{item.imgdesc}}</view>
@@ -67,7 +71,13 @@
 			}
 		},
 		methods: {
-			searchUserByKey(value){
+			getClaim(id) {
+				console.log(id)
+				uni.navigateTo({
+					url: '/pages/Claim/index?id=' + id
+				})
+			},
+			searchUserByKey(value) {
 				// this.loadInfo()
 				this.$u.toast('搜索内容为：' + value)
 			},
@@ -114,6 +124,29 @@
 </script>
 
 <style lang="scss" scoped>
+	.btnBox {
+		margin-top: -29px;
+		margin-left: 138px;
+		width: 150rpx;
+		display: flex;
+		justify-content: space-between;
+
+		.btn {
+			line-height: 52rpx;
+			width: 140rpx;
+			border-radius: 12rpx;
+			border: 2rpx solid $u-tips-color;
+			font-size: 26rpx;
+			text-align: center;
+			color: $u-tips-color;
+		}
+
+		.evaluate {
+			color: $u-type-primary;
+			border-color: $u-type-primary;
+		}
+	}
+
 	.u-wrap {
 		height: calc(100vh);
 		/* #ifdef H5 */
@@ -122,17 +155,17 @@
 		display: flex;
 		flex-direction: column;
 	}
-	
+
 	.u-search-box {
 		padding: 18rpx 30rpx;
 	}
-	
+
 	.u-menu-wrap {
 		flex: 1;
 		display: flex;
 		overflow: hidden;
 	}
-	
+
 	.u-search-inner {
 		background-color: rgb(234, 234, 234);
 		border-radius: 100rpx;
@@ -140,18 +173,18 @@
 		align-items: center;
 		padding: 10rpx 16rpx;
 	}
-	
+
 	.u-search-text {
 		font-size: 26rpx;
 		color: $u-tips-color;
 		margin-left: 10rpx;
 	}
-	
+
 	.u-tab-view {
 		width: 200rpx;
 		height: 100%;
 	}
-	
+
 	.u-tab-item {
 		height: 110rpx;
 		background: #f6f6f6;
@@ -164,7 +197,7 @@
 		font-weight: 400;
 		line-height: 1;
 	}
-	
+
 	.u-tab-item-active {
 		position: relative;
 		color: #000;
@@ -172,7 +205,7 @@
 		font-weight: 600;
 		background: #fff;
 	}
-	
+
 	.u-tab-item-active::before {
 		content: "";
 		position: absolute;
@@ -181,44 +214,44 @@
 		left: 0;
 		top: 39rpx;
 	}
-	
+
 	.u-tab-view {
 		height: 100%;
 	}
-	
+
 	.right-box {
 		background-color: rgb(250, 250, 250);
 	}
-	
+
 	.page-view {
 		padding: 16rpx;
 	}
-	
+
 	.class-item {
 		margin-bottom: 30rpx;
 		background-color: #fff;
 		padding: 16rpx;
 		border-radius: 8rpx;
 	}
-	
+
 	.item-title {
 		font-size: 30rpx;
 		color: $u-main-color;
 		font-weight: bold;
 		margin: 10rpx 0;
 	}
-	
+
 	.item-menu-name {
 		font-weight: normal;
 		font-size: 24rpx;
 		color: $u-main-color;
 	}
-	
+
 	.item-container {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	
+
 	.thumb-box {
 		width: 33.333333%;
 		display: flex;
@@ -228,12 +261,13 @@
 		margin-top: 20rpx;
 		margin-bottom: 10rpx;
 	}
-	
+
 	.item-menu-image {
 		width: 120rpx;
 		height: 120rpx;
 		border-radius: 100rpx;
 	}
+
 	page {
 		height: 100%;
 	}

@@ -212,6 +212,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -222,6 +226,12 @@ var _default =
 
   },
   methods: {
+    getClaim: function getClaim(id) {
+      console.log(id);
+      uni.navigateTo({
+        url: '/pages/Claim/index?id=' + id });
+
+    },
     searchUserByKey: function searchUserByKey(value) {
       // this.loadInfo()
       this.$u.toast('搜索内容为：' + value);

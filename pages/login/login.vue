@@ -23,7 +23,8 @@
 			<scroll-view scroll-y class="page">
 				<!-- 头像和文字部分 -->
 				<view class="text-center" :style="[{animation: 'show ' + 0.4+ 's 1'}]">
-					<image src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/custom/tuxiang.jpg" mode='aspectFit'
+					<!-- <image src="https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/custom/tuxiang.jpg" mode='aspectFit' -->
+					<image src="../../static/icon/active-lost.png" mode='aspectFit'
 						class="zai-logo "></image>
 					<view class="zai-title text-shadow ">失物招领</view>
 

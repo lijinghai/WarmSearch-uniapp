@@ -24,6 +24,26 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.btnBox {
+  margin-top: -29px;
+  margin-left: 230px;
+  width: 150rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.btnBox .btn {
+  line-height: 52rpx;
+  width: 140rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #909399;
+  font-size: 26rpx;
+  text-align: center;
+  color: #909399;
+}
+.btnBox .evaluate {
+  color: #2979ff;
+  border-color: #2979ff;
+}
 .goods_detail swiper {
   height: 700rpx;
 }

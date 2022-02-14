@@ -154,6 +154,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -164,6 +167,12 @@ var _default =
 
   },
   methods: {
+    getClaim: function getClaim(id) {
+      console.log(id);
+      uni.navigateTo({
+        url: '/pages/Claim/index?id=' + id });
+
+    },
     phone: function phone() {
       uni.makePhoneCall({
         phoneNumber: '该手机号' });

@@ -33,7 +33,6 @@
 						text="[通知] 19级张三同学遗失笔记本电脑,如有拾取到同学请速联系他,联系方式:15178***798,重谢!"></uni-notice-bar>
 				</view>
 				
-				<!-- =============================================================================================================== -->
 				<view class="order" v-for="(res, index) in goods" :key="res.id">
 					<view class="top" @click="goGoodsDetatil(res.id)">
 						<view class="left">

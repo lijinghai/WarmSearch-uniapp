@@ -24,6 +24,26 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.btnBox.data-v-2e2568f4 {
+  margin-top: -29px;
+  margin-left: 138px;
+  width: 150rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.btnBox .btn.data-v-2e2568f4 {
+  line-height: 52rpx;
+  width: 140rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #909399;
+  font-size: 26rpx;
+  text-align: center;
+  color: #909399;
+}
+.btnBox .evaluate.data-v-2e2568f4 {
+  color: #2979ff;
+  border-color: #2979ff;
+}
 .u-wrap.data-v-2e2568f4 {
   height: calc(100vh);
   display: flex;
