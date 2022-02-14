@@ -5,11 +5,6 @@
  -->
 <template>
 	<view>
-		<!-- <view>
-			<cu-custom bgColor="bg-gradual-blue" :isBack="false">
-				<block slot="content">个人中心</block>
-			</cu-custom>
-		</view> -->
 		
 		<!-- 内容区 -->
 		<view class="components-theme">
@@ -73,14 +68,10 @@
 						<view class="cu-avatar2 round xl margin-right-sm shadow-blur-lg bg-img open-data"
 							:style="[{ backgroundImage:'url(' + info.avatar + ')' }]">
 							<view class="cu-tag badge" :class="info.sex%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'"></view>
-							<!-- https://cdn.jsdelivr.net/gh/Dorian1015/cdn/img/custom/tuxiang.jpg -->
-							<!-- <open-data type="userAvatarUrl"></open-data> -->
-							<!-- style="overflow: hidden;background-image:url(info.avatar);"-->
 						</view>
 		
 						<view class="padding text-blue text-xl text-bold">
 							你好，{{info.name}}
-							<!-- <open-data type="userNickName"></open-data> -->
 						</view>
 		
 					</view>
@@ -96,7 +87,7 @@
 			<block>
 				
 				<!-- 导航图标 -->
-				<!-- <view class='padding flex text-center text-grey bg-white shadow-warp-my'>
+				<view class='padding flex text-center text-grey bg-white shadow-warp-my'>
 					<view class='flex flex-sub flex-direction solid-right' :style="[{animation: 'show ' + 0.6+ 's 1'}]">
 						<view class="text-xxl text-orange">829</view>
 						<view class="margin-top-sm">
@@ -115,7 +106,7 @@
 							<text class='cuIcon-like'></text> 点赞
 						</view>
 					</view>
-				</view> -->
+				</view>
 		
 		
 				<!--下：上半部分-->
@@ -137,22 +128,7 @@
 							</view>
 						</view>
 					</view>
-		
-					<!-- 用章安全测试 -->
-					<view class="cu-item " @click="mentalTest" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
-						<button class='content cu-btn'>
-							<image src='../../static/me/icon/bianqian.png' class='png' mode='aspectFit'></image>
-							<text class='text-lg margin-sm'>用章安全测试</text>
-						</button>
-						<view class="action" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
-							<view class="cu-tag round bg-orange light">技术</view>
-							<view class="cu-tag round bg-olive light">安全</view>
-							<view class="cu-tag round bg-blue light">保密性</view>
-						</view>
-					</view>
-		
-					
-		
+	
 					<!--分享小程序-->
 					<!-- #ifdef MP-WEIXIN -->
 					<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
@@ -191,19 +167,20 @@
 						</view>
 					</view>
 		
+					
 					<!-- 问题反馈 -->
 					<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
-						<button class='content cu-btn' open-type="feedback">
-							<image src='../../static/me/icon/chucuo.png' class='png' mode='aspectFit'></image>
+						<button class='content cu-btn' @click="goCourse">
+							<image src='../../static/me/icon/xiaoxi.png' class='png' mode='aspectFit'></image>
 							<text class='text-lg margin-sm'>问题反馈</text>
 						</button>
 					</view>
 					
-					<!-- 身份选择 -->
+					<!-- 关于我们 -->
 					<view class="cu-item" :style="[{animation: 'show ' + 0.6+ 's 1'}]">
 						<button class='content cu-btn' @click="goSelect">
 							<image src='../../static/me/icon/xiaoxi.png' class='png' mode='aspectFit'></image>
-							<text class='text-lg margin-sm'>身份选择</text>
+							<text class='text-lg margin-sm'>关于我们</text>
 						</button>
 					</view>
 					
@@ -252,9 +229,6 @@
 				infoid: {
 					id: ''
 				},
-
-				// Custom: this.Custom,
-				// CustomBar: this.CustomBar,
 				spaceShow: true,
 				modalName: null,
 				picName: '流星之夜',
@@ -336,7 +310,6 @@
 		methods: {
 			
 			//获取用户信息
-			// 获取用户id====>根据id获取信息
 			async getinfoid(){
 				let opts = {
 					url: '/suser/info?token='+ uni.getStorageSync('token'),
@@ -346,19 +319,8 @@
 					title: '加载中'
 				});
 				this.$httpTokenRequest(opts).then(res => {
-					console.log("执行了=========>")
-					console.log(res);
 					uni.hideLoading();
-				// const res = await this.$myRequest({
-				// 	url: '/pcuser/info?token=' + uni.getStorageSync('token')
-				// })
-				console.log("用户信息")
-				console.log(res)
-				// });
-				// this.info = res.data.data.items[0]
-				this.infoid = res.data.data
-				console.log("用户id==>"+this.infoid.id)
-				
+				this.infoid = res.data.data			
 				uni.showLoading({
 					title: '加载中'
 				});
@@ -384,29 +346,11 @@
 							this.info.mobile = result.mobile == null ? '无' : result.mobile
 							this.info.email = result.email == null ? '无' : result.email
 						}
-						
 					});
-					
-					// const res1 = await this.$myRequest({
-					// 	url: '/pcuser/id?limit=1&page=1&sort=1&id='+ this.infoid.id
-					// })
-					
 				}
 				});
 			},
 			
-			// 获取用户姓名和头像的数据
-			// async getInfo() {
-			// 	const res = await this.$myRequest({
-			// 		// url: '/goodsdetail?limit=1&page=1&sort=1&id=' + this.id
-			// 		url: '/pcuser/info?token=' + uni.getStorageSync('token')
-			// 	})
-			// 	console.log("用户信息")
-			// 	console.log(res)
-			// 	// this.info = res.data.data.items[0]
-			// 	this.info = res.data.data
-			// 	console.log(res.data.data)
-			// },
 
 			switchImage(index, name) {
 				this.topBackGroupImageIndex = index;
@@ -416,13 +360,6 @@
 			showModal(e) {
 				this.modalName = e.currentTarget.dataset.target
 			},
-
-			// 答题测试
-			// mentalTest() {
-			// 	uni.navigateTo({
-			// 		url: '../me/mentalTest/list'
-			// 	})
-			// },
 			//拨打固定电话
 			callPhoneNumber() {
 				uni.makePhoneCall({
@@ -442,18 +379,18 @@
 					url: '../attest/index'
 				})
 			},
-			// 身份选择
+			// 关于我们
 			goSelect() {
 				uni.navigateTo({
-					url: '../identity/index'
+					url: '../about-me/about-me'
 				})
 			},
-			// 加入企业
-			// goCourse() {
-			// 	uni.navigateTo({
-			// 		url: '../me/course'
-			// 	})
-			// },
+			// 问题反馈
+			goCourse() {
+				uni.navigateTo({
+					url: '../problem/index'
+				})
+			},
 			// 设置---用户详情
 			goSetting() {
 				uni.navigateTo({
@@ -468,11 +405,7 @@
 			},
 
 			// 页面进去时执行
-			// onLoad() {
-			// 	this.getInfo()
-			// },
 			onShow() {
-				// this.getInfo()
 				this.getinfoid()
 			}
 		}

@@ -351,29 +351,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -384,9 +361,6 @@ var _default =
       infoid: {
         id: '' },
 
-
-      // Custom: this.Custom,
-      // CustomBar: this.CustomBar,
       spaceShow: true,
       modalName: null,
       picName: '流星之夜',
@@ -468,7 +442,6 @@ var _default =
   methods: {
 
     //获取用户信息
-    // 获取用户id====>根据id获取信息
     getinfoid: function getinfoid() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var opts;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                 opts = {
                   url: '/suser/info?token=' + uni.getStorageSync('token'),
@@ -478,19 +451,8 @@ var _default =
                   title: '加载中' });
 
                 _this.$httpTokenRequest(opts).then(function (res) {
-                  console.log("执行了=========>");
-                  console.log(res);
                   uni.hideLoading();
-                  // const res = await this.$myRequest({
-                  // 	url: '/pcuser/info?token=' + uni.getStorageSync('token')
-                  // })
-                  console.log("用户信息");
-                  console.log(res);
-                  // });
-                  // this.info = res.data.data.items[0]
                   _this.infoid = res.data.data;
-                  console.log("用户id==>" + _this.infoid.id);
-
                   uni.showLoading({
                     title: '加载中' });
 
@@ -516,29 +478,11 @@ var _default =
                         _this.info.mobile = result.mobile == null ? '无' : result.mobile;
                         _this.info.email = result.email == null ? '无' : result.email;
                       }
-
                     });
-
-                    // const res1 = await this.$myRequest({
-                    // 	url: '/pcuser/id?limit=1&page=1&sort=1&id='+ this.infoid.id
-                    // })
-
                   }
                 });case 3:case "end":return _context.stop();}}}, _callee);}))();
     },
 
-    // 获取用户姓名和头像的数据
-    // async getInfo() {
-    // 	const res = await this.$myRequest({
-    // 		// url: '/goodsdetail?limit=1&page=1&sort=1&id=' + this.id
-    // 		url: '/pcuser/info?token=' + uni.getStorageSync('token')
-    // 	})
-    // 	console.log("用户信息")
-    // 	console.log(res)
-    // 	// this.info = res.data.data.items[0]
-    // 	this.info = res.data.data
-    // 	console.log(res.data.data)
-    // },
 
     switchImage: function switchImage(index, name) {
       this.topBackGroupImageIndex = index;
@@ -548,13 +492,6 @@ var _default =
     showModal: function showModal(e) {
       this.modalName = e.currentTarget.dataset.target;
     },
-
-    // 答题测试
-    // mentalTest() {
-    // 	uni.navigateTo({
-    // 		url: '../me/mentalTest/list'
-    // 	})
-    // },
     //拨打固定电话
     callPhoneNumber: function callPhoneNumber() {
       uni.makePhoneCall({
@@ -574,18 +511,18 @@ var _default =
         url: '../attest/index' });
 
     },
-    // 身份选择
+    // 关于我们
     goSelect: function goSelect() {
       uni.navigateTo({
-        url: '../identity/index' });
+        url: '../about-me/about-me' });
 
     },
-    // 加入企业
-    // goCourse() {
-    // 	uni.navigateTo({
-    // 		url: '../me/course'
-    // 	})
-    // },
+    // 问题反馈
+    goCourse: function goCourse() {
+      uni.navigateTo({
+        url: '../problem/index' });
+
+    },
     // 设置---用户详情
     goSetting: function goSetting() {
       uni.navigateTo({
@@ -600,11 +537,7 @@ var _default =
     },
 
     // 页面进去时执行
-    // onLoad() {
-    // 	this.getInfo()
-    // },
     onShow: function onShow() {
-      // this.getInfo()
       this.getinfoid();
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

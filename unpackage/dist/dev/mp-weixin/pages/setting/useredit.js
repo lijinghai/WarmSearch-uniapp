@@ -195,6 +195,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -214,7 +220,8 @@ var _default =
         workNo: '',
         phone: '',
         email: '',
-        id: '' } };
+        id: '',
+        introduction: '' } };
 
 
   },
@@ -270,17 +277,13 @@ var _default =
       }).finally(function () {
         _this2.loading = false;
       });
-
     },
 
     // 获取用户信息
     getInfo: function getInfo() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res, res1, result;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-
                   _this3.$myRequest({
-                    // url: '/uniappuser/id' + this.id
-                    url: '/suser/info?token=' + uni.getStorageSync('token')
-                    // url: '/uniappuser/id?limit=1&page=1&sort=1&id='+ this.infoid.id
-                  }));case 2:res = _context.sent;
+                    url: '/suser/info?token=' + uni.getStorageSync('token') }));case 2:res = _context.sent;
+
                 _this3.infoid = res.data.data;
                 console.log("用户id==>" + _this3.infoid.id);if (!(
                 res.data.data != null)) {_context.next = 14;break;}
@@ -297,23 +300,14 @@ var _default =
                   console.log(result.sex);
                   console.log(result.sex === 1);
                   _this3.info.name = result.name == null ? '用户' : result.name;
-                  // this.info.sex = result.sex === 1 ? '男' : '女'
                   _this3.switchC = result.sex == 1 ? true : false;
-                  // if(result.sex === 1){
-                  // 	this.switchC == true
-                  // }else if(result.sex === 2) {
-                  // 	this.switchC == false
-                  // }
                   _this3.info.username = result.username == null ? '无' : result.username;
                   _this3.info.birthday = result.birthday == null ? '无' : result.birthday;
                   _this3.info.account = result.account == null ? '无' : result.account;
                   _this3.info.mobile = result.mobile == null ? '无' : result.mobile;
                   _this3.info.email = result.email == null ? '无' : result.email;
+                  _this3.info.introduction = result.introduction == null ? '无' : result.introduction;
                 }case 14:case "end":return _context.stop();}}}, _callee);}))();
-
-
-
-
 
     },
 

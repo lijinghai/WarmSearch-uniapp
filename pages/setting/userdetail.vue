@@ -48,7 +48,7 @@
 					</view>
 				</view>
 
-				<!-- 生日 -->
+				<!-- 角色 -->
 				<view class="cu-item animation-slide-bottom" :style="[{animation: 'show ' + 0.4+ 's 1'}]">
 					<view class="content">
 						<text class="text-grey">角色</text>

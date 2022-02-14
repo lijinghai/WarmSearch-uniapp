@@ -9,9 +9,6 @@
     "pages/goods-detail/goods-detail",
     "pages/finds-detail/finds-detail",
     "pages/about-me/about-me",
-    "pages/forget/forget",
-    "pages/agree/agree",
-    "pages/hideAgree/hideAgree",
     "pages/me/salary",
     "pages/me/aboutMe",
     "pages/me/mentalTest/list",
@@ -21,7 +18,8 @@
     "pages/signOut/signOut",
     "pages/signOut/success",
     "pages/setting/userdetail",
-    "pages/setting/useredit"
+    "pages/setting/useredit",
+    "pages/problem/index"
   ],
   "subPackages": [],
   "window": {
@@ -48,7 +46,7 @@
       },
       {
         "text": "发布信息",
-        "pagePath": "pages/add/add",
+        "pagePath": "pages/me/course",
         "iconPath": "static/icon/add.png",
         "selectedIconPath": "static/icon/active-add.png"
       },
@@ -69,6 +67,5 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom",
     "tn-custom": "/components/TnCustom/TnCustom"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }
