@@ -1,16 +1,16 @@
 <template>
 	<!-- 模板化资讯列表 -->
 	<view>
-		<view class="new_item" @click="navigator(item.fl_id)" v-for="item in list" :key="item.fl_id">
-			<image :src="item.fl_imgurl"></image>
+		<view class="new_item" @click="navigator(item.id)" v-for="item in list" :key="item.id">
+			<image :src="item.flImgurl"></image>
 			<view class="right">
 				<view class="title">
-					{{item.fl_imgdesc}}
+					{{item.flImgdesc}}
 				</view>
 				<view class="info">
 					<!-- <text>发表时间:{{item.addTime | formatDate}}</text> -->
-					<text>发表时间:{{item.fl_createTime}}</text>
-					<text>浏览次数:{{item.f_click}}</text>
+					<text>发表时间:{{item.flCreatetime}}</text>
+					<text>状态:{{item.flStatus}}</text>
 				</view>
 			</view>
 		</view>
@@ -36,9 +36,9 @@
 			}
 		},
 		methods:{
-			navigator (fl_id) {
+			navigator (id) {
 				// 调用父组件的方法
-				this.$emit('itemClick',fl_id)
+				this.$emit('itemClick',id)
 			}
 		}
 	}

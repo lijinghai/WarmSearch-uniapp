@@ -9,18 +9,14 @@
 			<!-- 轮播图 -->
 			<swiper indicator-dots="true">
 				<swiper-item v-for="item in swipers" :key="item.id">
-					<image :src="item.f_img"></image>
-				</swiper-item>
-
-				<swiper-item v-for="item in swipers" :key="item.id+1">
-					<image :src="item.fl_imgurl"></image>
+					<image :src="item.flImgurl"></image>
 				</swiper-item>
 			</swiper>
 
 			<view class="box1">
 				<view class="dname">
-					<text>{{info.fl_imgdesc}}</text>
-					<text>{{info.fl_status}}</text>
+					<text>{{info.flImgdesc}}</text>
+					<text>{{info.flStatus}}</text>
 					<view class="btnBox">
 						<view @click="getClaim(info.id)" class="evaluate btn">认领</view>
 					</view>
@@ -31,9 +27,9 @@
 			<view class="line"></view>
 
 			<view class="box2">
-				<view>拾取时间:{{info.fl_createTime}}</view>
-				<view>联系人:{{info.fl_name}}</view>
-				<view @click="phone">联系方式:{{info.fl_contact}}(点击拨打)</view>
+				<view>拾取时间:{{info.flCreatetime}}</view>
+				<view>联系人:{{info.flName}}</view>
+				<view @click="phone">联系方式:{{info.flContact}}(点击拨打)</view>
 			</view>
 			<view class="line"></view>
 
@@ -54,7 +50,7 @@
 			getClaim(id) {
 				console.log(id)
 				uni.navigateTo({
-					url: '/pages/Claim/index?id=' + id
+					url: '/pages/claim2/index?id=' + id
 				})
 			},
 			phone() {
@@ -64,14 +60,14 @@
 			},
 			async getSwipers() {
 				const res = await this.$myRequest({
-					url: '/sfind?limit=1&page=1&sort=1&id=' + this.id
+					url: '/findlist/id?limit=1&page=1&sort=1&id=' + this.id
 				})
 				console.log(res)
 				this.swipers = res.data.data.items
 			},
 			async getInfo() {
 				const res = await this.$myRequest({
-					url: '/sfind?limit=1&page=1&sort=1&id=' + this.id
+					url: '/findlist/id?limit=1&page=1&sort=1&id=' + this.id
 				})
 				console.log(res)
 				this.info = res.data.data.items[0]

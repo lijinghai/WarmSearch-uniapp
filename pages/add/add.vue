@@ -88,7 +88,54 @@
 				<swiper-item class="swiper-item">
 					<scroll-view scroll-y style="height: 100%;width: 100%;" @scrolltolower="reachBottom">
 						<view class="page-box">
-
+							<form>
+								<view class="cu-form-group">
+									<view class="title">拾物人姓名：</view>
+									<input placeholder="请输入拾物人姓名" name="input" v-model="info2.flName"></input>
+								</view>
+								<view class="cu-form-group">
+									<view class="title">拾物人联系方式：</view>
+									<input placeholder="输入手机号码" name="input" v-model="info2.flContact"></input>
+									<view class="cu-capsule radius">
+										<view class='cu-tag bg-blue '>
+											+86
+										</view>
+										<view class="cu-tag line-blue">
+											中国大陆
+										</view>
+									</view>
+								</view>
+								<view class="cu-form-group margin-top">
+									<view class="title">物品描述</view>
+									<input placeholder="请输入物品描述" name="input" v-model="info2.flImgdesc"></input>
+								</view>
+					
+								<view class="cu-bar bg-white margin-top">
+									<view class="action">
+										物品图片
+									</view>
+									<view class="action">
+										{{imgList2.length}}/1
+									</view>
+								</view>
+								<view class="cu-form-group">
+									<view class="grid col-4 grid-square flex-sub">
+										<view class="bg-img" v-for="(item,index) in imgList2" :key="index"
+											@tap="ViewImage2" :data-url="imgList2[index]">
+											<image :src="imgList2[index]" mode="aspectFill"></image>
+											<view class="cu-tag bg-red" @tap.stop="DelImg2" :data-index="index">
+												<text class='cuIcon-close'></text>
+											</view>
+										</view>
+										<view class="solids" @tap="ChooseImage2" v-if="imgList2.length<1">
+											<text class='cuIcon-cameraadd'></text>
+										</view>
+									</view>
+								</view>
+								<view class="padding flex flex-direction">
+									<button class="cu-btn bg-blue lg" @click="onSubmit2">提交</button>
+								</view>
+							</form>
 						</view>
 					</scroll-view>
 				</swiper-item>
@@ -104,15 +151,17 @@
 		data() {
 			return {
 				info1: [],
+				info2: [],
 				index: 1,
 				imgList: [],
-				picker: ['','日用类', '证件类', '现金类', '电子类', '数码类'],
+				imgList2: [],
+				picker: ['', '日用类', '证件类', '现金类', '电子类', '数码类'],
 				percent: 50,
 				activeColor: '#0081ff',
 				striped: false,
 				stripedActive: false,
 				list: [{
-						name: '遗失物品'
+						name: '寻失物'
 					},
 					{
 						name: '寻失主'
@@ -122,16 +171,26 @@
 				swiperCurrent: 0,
 				tabsHeight: 0,
 				dx: 0,
-				info1:{
+				info1: {
 					id: undefined,
 					createTime: new Date(),
-					gid:'',
-					imgdesc:'',
-					imgname:'',
-					imgurl:'',
+					gid: '',
+					imgdesc: '',
+					imgname: '',
+					imgurl: '',
 					lostname: '',
-					status:'',
-					contact:''
+					status: '',
+					contact: ''
+				},
+				info2: {
+					id: undefined,
+					flCreateTime: new Date(),
+					flImgdesc: '',
+					flImgurl: '',
+					flName: '',
+					flStatus: '',
+					flContact: '',
+					flId: ''
 				}
 			};
 		},
@@ -258,18 +317,18 @@
 					this.$tip.alert('请输入正确的手机号');
 					return false
 				}
-				
+
 				this.info1.status = '未找到'
-			
+
 				const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
 				console.log("表单提交")
 				console.log(this.info1)
-				
+
 				this.$myRequest({
 					url: '/goodsfirst/all',
 					method: 'POST',
 					data: this.info1, // 发送的数据
-			
+
 				}).then((res) => {
 					console.log(res)
 					this.loading = false;
@@ -277,6 +336,124 @@
 						console.log("成功")
 						uni.switchTab({
 							url: '../index/index'
+						})
+						this.$tip.success('发布成功！')
+					} else if (res.data.code === 500) { // 获取数据失败
+						console.log("失败")
+						this.loading = false;
+						this.$tip.alert(res.data.message);
+					}
+				}).catch((err) => {
+					let msg = "请求出现错误，请稍后再试"
+					this.loading = false;
+					this.$tip.alert(msg);
+				}).finally(() => {
+					this.loading = false;
+				})
+			},
+			ChooseImage2() {
+				uni.chooseImage({
+					count: 4, //默认9
+					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+					sourceType: ['album'], //从相册选择
+					success: (res) => {
+						if (this.imgList2.length != 0) {
+							this.imgList2 = this.imgList2.concat(res.tempFilePaths)
+						} else {
+							this.imgList2 = res.tempFilePaths
+						}
+			
+						uni.uploadFile({
+							url: this.$BASE_URL.BASE_URL + '/upload',
+							method: 'POST',
+							name: 'file',
+							filePath: res.tempFilePaths[0]
+						}).then((res) => {
+							console.log("res1")
+							console.log(res)
+							this.loading = false;
+							if (res[1].statusCode === 200) { // 获取数据成功
+								console.log("成功")
+								var dataurl = res[1].data
+								console.log(JSON.parse(dataurl).url)
+								this.info2.flImgurl = JSON.parse(dataurl).url
+								this.$tip.success('上传成功!')
+							} else if (res[1].statusCode === 500) { // 获取数据失败
+								console.log("失败")
+								this.loading = false;
+								this.$tip.alert(res.data.message);
+							}
+						}).catch((err) => {
+							// let msg = "请求出现错误，请稍后再试"
+							// this.loading = false;
+							// this.$tip.alert(msg);
+						}).finally(() => {
+							this.loading = false;
+						})
+			
+			
+					}
+				});
+			},
+			ViewImage2(e) {
+				uni.previewImage({
+					urls: this.imgList2,
+					current: e.currentTarget.dataset.url
+				});
+			},
+			DelImg2(e) {
+				uni.showModal({
+					title: '主人',
+					content: '确定要删除这张照片吗？',
+					cancelText: '再看看',
+					confirmText: '再见',
+					success: res => {
+						if (res.confirm) {
+							this.imgList2.splice(e.currentTarget.dataset.index, 1)
+						}
+					}
+				})
+			},
+			onSubmit2() {
+				let myForm = this.info2
+				let checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
+				console.log("myForm", myForm)
+				if (!myForm.flImgurl || myForm.flImgurl.length == 0) {
+					this.$tip.alert('请上传图片');
+					return false
+				}
+				if (!myForm.flName || myForm.flName.length == 0) {
+					this.$tip.alert('请输入姓名');
+					return false
+				}
+				if (!myForm.flImgdesc || myForm.flImgdesc.length == 0) {
+					this.$tip.alert('请输入物品描述');
+					return false
+				}
+				
+				if (!checkPhone.test(myForm.flContact)) {
+					this.$tip.alert('请输入正确的手机号');
+					return false
+				}
+			
+				this.info2.flStatus = '待招领'
+			
+				const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
+				console.log("表单提交")
+				console.log(this.info2)
+			
+				this.$myRequest({
+					url: '/findlist/all',
+					method: 'POST',
+					data: this.info2, // 发送的数据
+			
+				}).then((res) => {
+					console.log(res)
+					this.loading = false;
+					if (res.data.code === 20000) { // 获取数据成功
+						console.log("成功")
+						uni.switchTab({
+							url: '../find/find'
 						})
 						this.$tip.success('发布成功！')
 					} else if (res.data.code === 500) { // 获取数据失败

@@ -91,6 +91,12 @@
 			}
 		},
 		{
+			"path": "pages/claim2/index",
+			"style": {
+			
+			}
+		},
+		{
 			"path": "pages/me/course",
 			"style": {
 				"navigationBarTitleText": "班级课程",

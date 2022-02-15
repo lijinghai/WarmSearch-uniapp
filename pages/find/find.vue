@@ -20,23 +20,30 @@
 		methods: {
 			async getFindList() {
 				const res = await this.$myRequest({
-					url: '/sfind?id=1&limit=1&page=1&sort=1'
+					url: '/findlist?limit=99&page=1&sort=1'
+					
 				})
 				console.log(res)
 				this.findlist = res.data.data.items
+				console.log(this.findlist)
 			},
 			goDetail (fl_id) {
 				console.log(fl_id)
 				uni.navigateTo({
 					url: '/pages/finds-detail/finds-detail?id='+fl_id
 				})
-			}
+			},
+			// 页面进去时执行
+			onShow() {
+				this.getFindList()
+			},
 		},
 		// 注册组件
 		components: {"findItem":findItem},
 		onLoad() {
 			this.getFindList()
 		}
+		
 	}
 </script>
 

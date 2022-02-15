@@ -98,7 +98,7 @@ var components
 try {
   components = {
     uTabsSwiper: function() {
-      return Promise.all(/*! import() | uview-ui/components/u-tabs-swiper/u-tabs-swiper */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-tabs-swiper/u-tabs-swiper")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tabs-swiper/u-tabs-swiper.vue */ 256))
+      return Promise.all(/*! import() | uview-ui/components/u-tabs-swiper/u-tabs-swiper */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-tabs-swiper/u-tabs-swiper")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tabs-swiper/u-tabs-swiper.vue */ 262))
     }
   }
 } catch (e) {
@@ -256,20 +256,69 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
-  data: function data() {
-    return _defineProperty({
+  data: function data() {var _ref;
+    return _ref = {
       info1: [],
+      info2: [],
       index: 1,
       imgList: [],
+      imgList2: [],
       picker: ['', '日用类', '证件类', '现金类', '电子类', '数码类'],
       percent: 50,
       activeColor: '#0081ff',
       striped: false,
       stripedActive: false,
       list: [{
-        name: '遗失物品' },
+        name: '寻失物' },
 
       {
         name: '寻失主' }],
@@ -278,7 +327,7 @@ var _default =
       current: 0,
       swiperCurrent: 0,
       tabsHeight: 0,
-      dx: 0 }, "info1",
+      dx: 0 }, _defineProperty(_ref, "info1",
     {
       id: undefined,
       createTime: new Date(),
@@ -288,7 +337,17 @@ var _default =
       imgurl: '',
       lostname: '',
       status: '',
-      contact: '' });
+      contact: '' }), _defineProperty(_ref, "info2",
+
+    {
+      id: undefined,
+      flCreateTime: new Date(),
+      flImgdesc: '',
+      flImgurl: '',
+      flName: '',
+      flStatus: '',
+      flContact: '',
+      flId: '' }), _ref;
 
 
   },
@@ -447,6 +506,124 @@ var _default =
         _this4.$tip.alert(msg);
       }).finally(function () {
         _this4.loading = false;
+      });
+    },
+    ChooseImage2: function ChooseImage2() {var _this5 = this;
+      uni.chooseImage({
+        count: 4, //默认9
+        sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album'], //从相册选择
+        success: function success(res) {
+          if (_this5.imgList2.length != 0) {
+            _this5.imgList2 = _this5.imgList2.concat(res.tempFilePaths);
+          } else {
+            _this5.imgList2 = res.tempFilePaths;
+          }
+
+          uni.uploadFile({
+            url: _this5.$BASE_URL.BASE_URL + '/upload',
+            method: 'POST',
+            name: 'file',
+            filePath: res.tempFilePaths[0] }).
+          then(function (res) {
+            console.log("res1");
+            console.log(res);
+            _this5.loading = false;
+            if (res[1].statusCode === 200) {// 获取数据成功
+              console.log("成功");
+              var dataurl = res[1].data;
+              console.log(JSON.parse(dataurl).url);
+              _this5.info2.flImgurl = JSON.parse(dataurl).url;
+              _this5.$tip.success('上传成功!');
+            } else if (res[1].statusCode === 500) {// 获取数据失败
+              console.log("失败");
+              _this5.loading = false;
+              _this5.$tip.alert(res.data.message);
+            }
+          }).catch(function (err) {
+            // let msg = "请求出现错误，请稍后再试"
+            // this.loading = false;
+            // this.$tip.alert(msg);
+          }).finally(function () {
+            _this5.loading = false;
+          });
+
+
+        } });
+
+    },
+    ViewImage2: function ViewImage2(e) {
+      uni.previewImage({
+        urls: this.imgList2,
+        current: e.currentTarget.dataset.url });
+
+    },
+    DelImg2: function DelImg2(e) {var _this6 = this;
+      uni.showModal({
+        title: '主人',
+        content: '确定要删除这张照片吗？',
+        cancelText: '再看看',
+        confirmText: '再见',
+        success: function success(res) {
+          if (res.confirm) {
+            _this6.imgList2.splice(e.currentTarget.dataset.index, 1);
+          }
+        } });
+
+    },
+    onSubmit2: function onSubmit2() {var _this7 = this;
+      var myForm = this.info2;
+      var checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
+      console.log("myForm", myForm);
+      if (!myForm.flImgurl || myForm.flImgurl.length == 0) {
+        this.$tip.alert('请上传图片');
+        return false;
+      }
+      if (!myForm.flName || myForm.flName.length == 0) {
+        this.$tip.alert('请输入姓名');
+        return false;
+      }
+      if (!myForm.flImgdesc || myForm.flImgdesc.length == 0) {
+        this.$tip.alert('请输入物品描述');
+        return false;
+      }
+
+      if (!checkPhone.test(myForm.flContact)) {
+        this.$tip.alert('请输入正确的手机号');
+        return false;
+      }
+
+      this.info2.flStatus = '待招领';
+
+      var _this = this; // 获取此时的this为一个常量，防止下面请求回调改变出错
+      console.log("表单提交");
+      console.log(this.info2);
+
+      this.$myRequest({
+        url: '/findlist/all',
+        method: 'POST',
+        data: this.info2 // 发送的数据
+      }).
+      then(function (res) {
+        console.log(res);
+        _this7.loading = false;
+        if (res.data.code === 20000) {// 获取数据成功
+          console.log("成功");
+          uni.switchTab({
+            url: '../find/find' });
+
+          _this7.$tip.success('发布成功！');
+        } else if (res.data.code === 500) {// 获取数据失败
+          console.log("失败");
+          _this7.loading = false;
+          _this7.$tip.alert(res.data.message);
+        }
+      }).catch(function (err) {
+        var msg = "请求出现错误，请稍后再试";
+        _this7.loading = false;
+        _this7.$tip.alert(msg);
+      }).finally(function () {
+        _this7.loading = false;
       });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

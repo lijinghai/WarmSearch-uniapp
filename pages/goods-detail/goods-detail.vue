@@ -12,9 +12,6 @@
 					<image :src="item.imgurl"></image>
 				</swiper-item>
 
-				<!-- <swiper-item v-for="item in swipers" :key="item.id+1">
-					<image :src="item.d_imgurl"></image>
-				</swiper-item> -->
 			</swiper>
 
 			<view
@@ -57,7 +54,7 @@
 						<text class='text-lg margin-sm'>丢失时间</text>
 					</view>
 					<view class="action">
-						<view>{{info.create_time}}</view>
+						<view>{{info.createTime}}</view>
 					</view>
 				</view>
 
