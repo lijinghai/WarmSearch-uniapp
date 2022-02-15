@@ -223,6 +223,10 @@ var _default =
       var myForm = this.info1;
       var checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
       console.log("myForm", myForm);
+      if (!myForm.url || myForm.url.length == 0) {
+        this.$tip.alert('请上传图片');
+        return false;
+      }
       if (!myForm.userName || myForm.userName.length == 0) {
         this.$tip.alert('请输入姓名');
         return false;
@@ -254,11 +258,10 @@ var _default =
         _this2.loading = false;
         if (res.data.code === 20000) {// 获取数据成功
           console.log("成功");
-
           uni.switchTab({
-            url: '../people/people' });
+            url: '../index/index' });
 
-          _this2.$tip.success('修改成功!');
+          _this2.$tip.success('请静候我们的联系!');
         } else if (res.data.code === 500) {// 获取数据失败
           console.log("失败");
           _this2.loading = false;
@@ -337,7 +340,7 @@ var _default =
     },
     getInfo: function getInfo() {var _this5 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
                   _this5.$myRequest({
-                    url: '/goodsdetail?limit=1&page=1&sort=1&id=' + _this5.id }));case 2:res = _context.sent;
+                    url: '/goodsfirst/id?limit=1&page=1&sort=1&id=' + _this5.id }));case 2:res = _context.sent;
 
                 console.log(res);
                 _this5.info = res.data.data.items[0];

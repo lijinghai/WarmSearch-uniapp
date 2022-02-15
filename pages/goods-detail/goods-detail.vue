@@ -12,9 +12,9 @@
 					<image :src="item.imgurl"></image>
 				</swiper-item>
 
-				<swiper-item v-for="item in swipers" :key="item.id+1">
+				<!-- <swiper-item v-for="item in swipers" :key="item.id+1">
 					<image :src="item.d_imgurl"></image>
-				</swiper-item>
+				</swiper-item> -->
 			</swiper>
 
 			<view
@@ -103,14 +103,14 @@
 			},
 			async getSwipers() {
 				const res = await this.$myRequest({
-					url: '/goodsdetail?limit=1&page=1&sort=1&id=' + this.id
+					url: '/goodsfirst/id?limit=1&page=1&sort=1&id=' + this.id
 				})
 				console.log(res)
 				this.swipers = res.data.data.items
 			},
 			async getInfo() {
 				const res = await this.$myRequest({
-					url: '/goodsdetail?limit=1&page=1&sort=1&id=' + this.id
+					url: '/goodsfirst/id?limit=1&page=1&sort=1&id=' + this.id
 				})
 				console.log(res)
 				this.info = res.data.data.items[0]

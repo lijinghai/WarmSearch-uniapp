@@ -301,6 +301,10 @@ var _default =
       uni.navigateTo({
         url: '/pages/Claim/index?id=' + id });
 
+    },
+    // 页面进去时执行
+    onShow: function onShow() {
+      this.getHotGoods();
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

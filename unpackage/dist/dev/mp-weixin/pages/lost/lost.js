@@ -97,6 +97,9 @@ try {
   components = {
     uIcon: function() {
       return __webpack_require__.e(/*! import() | uview-ui/components/u-icon/u-icon */ "uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-icon/u-icon.vue */ 221))
+    },
+    uLine: function() {
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-line/u-line */ "uview-ui/components/u-line/u-line").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-line/u-line.vue */ 242))
     }
   }
 } catch (e) {
@@ -215,7 +218,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 var _default =
 {
   data: function data() {
@@ -261,7 +263,7 @@ var _default =
     },
     previewImg: function previewImg(current) {
       var urls = this.secondData.map(function (item) {
-        return item.d_imgurl;
+        return item.imgurl;
       });
       console.log(urls);
       // 预览图片

@@ -93,6 +93,10 @@
 				let myForm = this.info1
 				let checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
 				console.log("myForm", myForm)
+				if (!myForm.url || myForm.url.length == 0) {
+					this.$tip.alert('请上传图片');
+					return false
+				}
 				if (!myForm.userName || myForm.userName.length == 0) {
 					this.$tip.alert('请输入姓名');
 					return false
@@ -124,11 +128,10 @@
 					this.loading = false;
 					if (res.data.code === 20000) { // 获取数据成功
 						console.log("成功")
-
 						uni.switchTab({
-							url: '../people/people'
+							url: '../index/index'
 						})
-						this.$tip.success('修改成功!')
+						this.$tip.success('请静候我们的联系!')
 					} else if (res.data.code === 500) { // 获取数据失败
 						console.log("失败")
 						this.loading = false;
@@ -207,7 +210,7 @@
 			},
 			async getInfo() {
 				const res = await this.$myRequest({
-					url: '/goodsdetail?limit=1&page=1&sort=1&id=' + this.id
+					url: '/goodsfirst/id?limit=1&page=1&sort=1&id=' + this.id
 				})
 				console.log(res)
 				this.info = res.data.data.items[0]

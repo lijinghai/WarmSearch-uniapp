@@ -34,7 +34,7 @@
 			<!-- 右侧信息页显示 -->
 			<scroll-view class="right" scroll-y>
 				<view class="item" v-for="item in secondData" :key="item.g_id">
-					<image @click="previewImg(item.d_imgurl)" :src="item.d_imgurl"></image>
+					<image @click="previewImg(item.imgurl)" :src="item.imgurl"></image>
 					<view class="lname">
 						<text>{{item.imgname}}</text>
 						<text>{{item.status}}</text>
@@ -42,16 +42,15 @@
 							<button @click="getClaim(item.id)" class='cu-btn bg-green shadow'>认领</button>
 						</view>
 					</view>
-					<view class="line"></view>
+					<!-- <view class="line"></view> -->
 					<view class="goods_name">{{item.imgdesc}}</view>
-					<view class="line"></view>
+					<!-- <view class="line"></view> -->
+						<u-line color="#f1f1f1" margin="24rpx 0 15rpx 0"></u-line>
 					<view class="box2">
 						<view>丢失时间:{{item.create_time}}</view>
 						<view>联系人:{{item.lostname}}</view>
 						<view @click="phone">联系方式:{{item.contact}}(点击拨打)</view>
 					</view>
-
-
 					<view class="line"></view>
 				</view>
 				<text v-if="secondData.length == 0">暂无数据</text>
@@ -106,7 +105,7 @@
 			},
 			previewImg(current) {
 				const urls = this.secondData.map(item => {
-					return item.d_imgurl
+					return item.imgurl
 				})
 				console.log(urls)
 				// 预览图片

@@ -99,18 +99,6 @@ try {
   components = {
     uTabsSwiper: function() {
       return Promise.all(/*! import() | uview-ui/components/u-tabs-swiper/u-tabs-swiper */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-tabs-swiper/u-tabs-swiper")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tabs-swiper/u-tabs-swiper.vue */ 256))
-    },
-    uIcon: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-icon/u-icon */ "uview-ui/components/u-icon/u-icon").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-icon/u-icon.vue */ 221))
-    },
-    uLineProgress: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-line-progress/u-line-progress */ "uview-ui/components/u-line-progress/u-line-progress").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-line-progress/u-line-progress.vue */ 263))
-    },
-    uLine: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-line/u-line */ "uview-ui/components/u-line/u-line").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-line/u-line.vue */ 242))
-    },
-    uLoadmore: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-loadmore/u-loadmore */ "uview-ui/components/u-loadmore/u-loadmore").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-loadmore/u-loadmore.vue */ 249))
     }
   }
 } catch (e) {
@@ -167,40 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
 //
@@ -304,172 +259,195 @@ __webpack_require__.r(__webpack_exports__);
 var _default =
 {
   data: function data() {
-    return {
+    return _defineProperty({
+      info1: [],
+      index: 1,
+      imgList: [],
+      picker: ['', '日用类', '证件类', '现金类', '电子类', '数码类'],
       percent: 50,
       activeColor: '#0081ff',
       striped: false,
       stripedActive: false,
-
-      avatar: [
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg',
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg',
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big91012.jpg'],
-
-
-      orderList: [[], [], [], []],
-      dataList: [
-      {
-        id: 1,
-        store: '小班课 · 1班',
-        progre: 60,
-        goodsList: [
-        {
-          goodsUrl: 'http://cdn.zhoukaiwen.com/web2.jpg',
-          title: '第一阶段·5课时',
-          type: '课程名称：《vue-router全局导航守卫》，简介：导航首位就是变化的路由钩子...',
-          teacher: '王老师',
-          number: 2 }] },
-
-
+      list: [{
+        name: '遗失物品' },
 
       {
-        id: 2,
-        store: '精品课 · 2班',
-        progre: 39,
-        goodsList: [
-        {
-          goodsUrl: 'http://cdn.zhoukaiwen.com/web1.jpg',
-          title: 'Promise的链式调用',
-          type: 'Promise 必须为以下三种状态之一：等待态（Pending）、执行态（Fulfilled）和拒绝态（Rejected）。一旦Promise 被 resolve 或 reject，不能再迁移至其他任何状态（即状态 immutable）。',
-          teacher: 'Lee老师',
-          number: 1 }] },
-
-
-
-      {
-        id: 3,
-        store: '小班课 · 3班',
-        progre: 55,
-        goodsList: [
-        {
-          goodsUrl: 'http://cdn.zhoukaiwen.com/web2.jpg',
-          title: '基于vue应用中实用的性能技巧',
-          type: '1.封装项目的基础库；2.层级管理；3.缓存；4.延迟加载；5.工程化-webpack的改进；6.控制代码质量；7.自动化部署等优化方案',
-          teacher: '王老师',
-          number: 3 }] },
-
-
-
-      {
-        id: 4,
-        store: '小班课 · 4班',
-        progre: 80,
-        goodsList: [
-        {
-          goodsUrl: 'http://cdn.zhoukaiwen.com/web1.jpg',
-          title: '变量提升及函数提升',
-          type: '引擎在读取js代码的过程中,分为两步。第一个步骤是整个js代码的解析读取,第二个步骤是执行',
-          teacher: '王老师',
-          number: 9 }] }],
-
-
-
-
-      list: [
-      {
-        name: 'UI设计班' },
-
-      {
-        name: 'Web前端班' },
-
-      {
-        name: 'Java后台班' }],
+        name: '寻失主' }],
 
 
       current: 0,
       swiperCurrent: 0,
       tabsHeight: 0,
-      dx: 0,
-      loadStatus: ['loadmore', 'loadmore', 'loadmore', 'loadmore'] };
+      dx: 0 }, "info1",
+    {
+      id: undefined,
+      createTime: new Date(),
+      gid: '',
+      imgdesc: '',
+      imgname: '',
+      imgurl: '',
+      lostname: '',
+      status: '',
+      contact: '' });
+
 
   },
   onLoad: function onLoad() {
-    this.getOrderList(0);
-    this.getOrderList(1);
-    this.getOrderList(3);
+
   },
-  computed: {
-    // 价格小数
-    priceDecimal: function priceDecimal() {
-      return function (val) {
-        if (val !== parseInt(val)) return val.slice(-2);else
-        return '00';
-      };
-    },
-    // 价格整数
-    priceInt: function priceInt() {
-      return function (val) {
-        if (val !== parseInt(val)) return val.split('.')[0];else
-        return val;
-      };
-    } },
-
+  computed: {},
   methods: {
-    goClass: function goClass() {
-      uni.showToast({
-        title: '没有权限～',
-        duration: 2000,
-        icon: 'none' });
+    ChooseImage: function ChooseImage() {var _this2 = this;
+      uni.chooseImage({
+        count: 4, //默认9
+        sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album'], //从相册选择
+        success: function success(res) {
+          if (_this2.imgList.length != 0) {
+            _this2.imgList = _this2.imgList.concat(res.tempFilePaths);
+          } else {
+            _this2.imgList = res.tempFilePaths;
+          }
+
+          uni.uploadFile({
+            url: _this2.$BASE_URL.BASE_URL + '/upload',
+            method: 'POST',
+            name: 'file',
+            filePath: res.tempFilePaths[0] }).
+          then(function (res) {
+            console.log("res1");
+            console.log(res);
+            _this2.loading = false;
+            if (res[1].statusCode === 200) {// 获取数据成功
+              console.log("成功");
+              var dataurl = res[1].data;
+              console.log(JSON.parse(dataurl).url);
+              _this2.info1.imgurl = JSON.parse(dataurl).url;
+              _this2.$tip.success('上传成功!');
+            } else if (res[1].statusCode === 500) {// 获取数据失败
+              console.log("失败");
+              _this2.loading = false;
+              _this2.$tip.alert(res.data.message);
+            }
+          }).catch(function (err) {
+            // let msg = "请求出现错误，请稍后再试"
+            // this.loading = false;
+            // this.$tip.alert(msg);
+          }).finally(function () {
+            _this2.loading = false;
+          });
+
+
+        } });
 
     },
-    reachBottom: function reachBottom() {var _this = this;
-      // 此tab为空数据
-      if (this.current != 2) {
-        this.loadStatus.splice(this.current, 1, "loading");
-        setTimeout(function () {
-          _this.getOrderList(_this.current);
-        }, 1200);
-      }
+    ViewImage: function ViewImage(e) {
+      uni.previewImage({
+        urls: this.imgList,
+        current: e.currentTarget.dataset.url });
+
     },
-    // 页面数据
-    getOrderList: function getOrderList(idx) {
-      for (var i = 0; i < 5; i++) {
-        var index = this.$u.random(0, this.dataList.length - 1);
-        var data = JSON.parse(JSON.stringify(this.dataList[index]));
-        data.id = this.$u.guid();
-        this.orderList[idx].push(data);
-      }
-      this.loadStatus.splice(this.current, 1, "loadmore");
+    DelImg: function DelImg(e) {var _this3 = this;
+      uni.showModal({
+        title: '主人',
+        content: '确定要删除这张照片吗？',
+        cancelText: '再看看',
+        confirmText: '再见',
+        success: function success(res) {
+          if (res.confirm) {
+            _this3.imgList.splice(e.currentTarget.dataset.index, 1);
+          }
+        } });
+
     },
-    // 总价
-    totalPrice: function totalPrice(item) {
-      var price = 0;
-      item.map(function (val) {
-        price += parseFloat(val.price);
-      });
-      return price.toFixed(2);
-    },
-    // 总件数
-    totalNum: function totalNum(item) {
-      var num = 0;
-      item.map(function (val) {
-        num += val.number;
-      });
-      return num;
+    // 下拉框
+    PickerChange: function PickerChange(e) {
+      this.index = e.detail.value;
+      console.log(this.index);
+      this.info1.gid = e.detail.value;
     },
     // tab栏切换
     change: function change(index) {
       this.swiperCurrent = index;
-      this.getOrderList(index);
+      // this.getOrderList(index);
     },
-    transition: function transition(_ref) {var dx = _ref.detail.dx;
+    transition: function transition(_ref2)
+
+
+
+    {var dx = _ref2.detail.dx;
       this.$refs.tabs.setDx(dx);
     },
-    animationfinish: function animationfinish(_ref2) {var current = _ref2.detail.current;
+    animationfinish: function animationfinish(_ref3)
+
+
+
+    {var current = _ref3.detail.current;
       this.$refs.tabs.setFinishCurrent(current);
       this.swiperCurrent = current;
       this.current = current;
+    },
+    onSubmit: function onSubmit() {var _this4 = this;
+      var myForm = this.info1;
+      var checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
+      console.log("myForm", myForm);
+      if (!myForm.imgurl || myForm.imgurl.length == 0) {
+        this.$tip.alert('请上传图片');
+        return false;
+      }
+      if (!myForm.gid || myForm.gid.length == 0) {
+        this.$tip.alert('请选择类别');
+        return false;
+      }
+      if (!myForm.lostname || myForm.lostname.length == 0) {
+        this.$tip.alert('请输入姓名');
+        return false;
+      }
+      if (!myForm.imgdesc || myForm.imgdesc.length == 0) {
+        this.$tip.alert('请输入物品描述');
+        return false;
+      }
+      if (!myForm.imgname || myForm.imgname.length == 0) {
+        this.$tip.alert('请输入物品名称');
+        return false;
+      }
+      if (!checkPhone.test(myForm.contact)) {
+        this.$tip.alert('请输入正确的手机号');
+        return false;
+      }
+
+      this.info1.status = '未找到';
+
+      var _this = this; // 获取此时的this为一个常量，防止下面请求回调改变出错
+      console.log("表单提交");
+      console.log(this.info1);
+
+      this.$myRequest({
+        url: '/goodsfirst/all',
+        method: 'POST',
+        data: this.info1 // 发送的数据
+      }).
+      then(function (res) {
+        console.log(res);
+        _this4.loading = false;
+        if (res.data.code === 20000) {// 获取数据成功
+          console.log("成功");
+          uni.switchTab({
+            url: '../index/index' });
+
+          _this4.$tip.success('发布成功！');
+        } else if (res.data.code === 500) {// 获取数据失败
+          console.log("失败");
+          _this4.loading = false;
+          _this4.$tip.alert(res.data.message);
+        }
+      }).catch(function (err) {
+        var msg = "请求出现错误，请稍后再试";
+        _this4.loading = false;
+        _this4.$tip.alert(msg);
+      }).finally(function () {
+        _this4.loading = false;
+      });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

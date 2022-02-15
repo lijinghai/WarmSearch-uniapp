@@ -135,6 +135,10 @@
 				uni.navigateTo({
 					url: '/pages/Claim/index?id=' + id
 				})
+			},
+			// 页面进去时执行
+			onShow() {
+				this.getHotGoods()
 			}
 		}
 	};

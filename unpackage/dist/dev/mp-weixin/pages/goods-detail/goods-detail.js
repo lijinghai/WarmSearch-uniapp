@@ -113,14 +113,14 @@ var _default =
     },
     getSwipers: function getSwipers() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
                   _this.$myRequest({
-                    url: '/goodsdetail?limit=1&page=1&sort=1&id=' + _this.id }));case 2:res = _context.sent;
+                    url: '/goodsfirst/id?limit=1&page=1&sort=1&id=' + _this.id }));case 2:res = _context.sent;
 
                 console.log(res);
                 _this.swipers = res.data.data.items;case 5:case "end":return _context.stop();}}}, _callee);}))();
     },
     getInfo: function getInfo() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
                   _this2.$myRequest({
-                    url: '/goodsdetail?limit=1&page=1&sort=1&id=' + _this2.id }));case 2:res = _context2.sent;
+                    url: '/goodsfirst/id?limit=1&page=1&sort=1&id=' + _this2.id }));case 2:res = _context2.sent;
 
                 console.log(res);
                 _this2.info = res.data.data.items[0];case 5:case "end":return _context2.stop();}}}, _callee2);}))();
