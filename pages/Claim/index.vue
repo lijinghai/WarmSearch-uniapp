@@ -85,7 +85,18 @@
 				info: [],
 				info1: [],
 				id: 0,
-				imgList: []
+				imgList: [],
+				info1: {
+					id: undefined,
+					imgUrl: '',
+					address: '',
+					contact: '',
+					createTime: new Date(),
+					updateTime: new Date(),
+					goodsName: '',
+					number: '',
+					userName: ''
+				}
 			}
 		},
 		methods: {
@@ -119,8 +130,8 @@
 				console.log("表单提交")
 				// 提交跳转
 				this.$myRequest({
-					url: '/suser1',
-					method: 'Put',
+					url: '/pcattestation/all',
+					method: 'POST',
 					data: _this.info1, // 发送的数据
 
 				}).then((res) => {
