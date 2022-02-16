@@ -234,7 +234,7 @@ var _default =
       var myForm = this.info1;
       var checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
       console.log("myForm", myForm);
-      if (!myForm.url || myForm.url.length == 0) {
+      if (!myForm.imgUrl || myForm.imgUrl.length == 0) {
         this.$tip.alert('请上传图片');
         return false;
       }
@@ -311,7 +311,7 @@ var _default =
               console.log("成功");
               var dataurl = res[1].data;
               console.log(JSON.parse(dataurl).url);
-              _this3.info1.url = JSON.parse(dataurl).url;
+              _this3.info1.imgUrl = JSON.parse(dataurl).url;
               _this3.$tip.success('上传成功!');
             } else if (res[1].statusCode === 500) {// 获取数据失败
               console.log("失败");

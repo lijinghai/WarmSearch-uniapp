@@ -104,7 +104,7 @@
 				let myForm = this.info1
 				let checkPhone = new RegExp(/^[1]([3-9])[0-9]{9}$/);
 				console.log("myForm", myForm)
-				if (!myForm.url || myForm.url.length == 0) {
+				if (!myForm.imgUrl || myForm.imgUrl.length == 0) {
 					this.$tip.alert('请上传图片');
 					return false
 				}
@@ -181,7 +181,7 @@
 								console.log("成功")
 								var dataurl = res[1].data
 								console.log(JSON.parse(dataurl).url)
-								this.info1.url = JSON.parse(dataurl).url
+								this.info1.imgUrl = JSON.parse(dataurl).url
 								this.$tip.success('上传成功!')
 							} else if (res[1].statusCode === 500) { // 获取数据失败
 								console.log("失败")

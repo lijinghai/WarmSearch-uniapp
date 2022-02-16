@@ -69,5 +69,6 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom",
     "tn-custom": "/components/TnCustom/TnCustom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
