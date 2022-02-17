@@ -124,7 +124,7 @@
 					this.$tip.alert('请输入正确的手机号');
 					return false
 				}
-				this.info1.imgname = this.info.imgname
+				this.info1.goodsName = this.info.imgname
 
 				const _this = this // 获取此时的this为一个常量，防止下面请求回调改变出错
 				console.log("表单提交")

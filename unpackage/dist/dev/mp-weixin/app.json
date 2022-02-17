@@ -49,8 +49,8 @@
       {
         "text": "发布信息",
         "pagePath": "pages/add/add",
-        "iconPath": "static/icon/add.png",
-        "selectedIconPath": "static/icon/active-add.png"
+        "iconPath": "static/icon/add1.png",
+        "selectedIconPath": "static/icon/active-add1.png"
       },
       {
         "text": "寻失主",
@@ -62,7 +62,7 @@
         "text": "个人中心",
         "pagePath": "pages/people/people",
         "iconPath": "static/icon/people.png",
-        "selectedIconPath": "static/icon/active-people.png"
+        "selectedIconPath": "static/icon/active_people.png"
       }
     ]
   },
