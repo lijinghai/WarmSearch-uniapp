@@ -163,7 +163,18 @@ global.isLogin = function () {
 };var _default =
 {
   onShow: function onShow() {
-    console.log('App Show');
+    console.log(' __    _         _   _                       __               _');
+    console.log('[  |  (_)       (_) (_)                     [  |             (_)');
+    console.log(' | |  __        __  __   _ .--.   .--./)     | |--.   ,--.   __');
+    console.log(' | | [  |      [  |[  | [ `.-. | / /`\;       | .-. | ``_\ : [  |');
+    console.log(' | |  | |    _  | | | |  | | | | \ \._//       | | | | // | |, | |');
+    console.log('[___][___]  [ \_| |[___][___||__].,__`       [___]|__]\`-;__/[___]');
+    console.log('             \____/             ( ( __))');
+    console.log(' ');
+    console.log('my Email : lijinghailjh@163.com');
+    console.log('my Github: https://github.com/lijinghailjh');
+    console.log('( ͡° ͜ʖ ͡°)✧ *************************************************************');
+    console.log(' ');
   },
   onHide: function onHide() {
     console.log('App Hide');

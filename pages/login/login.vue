@@ -431,7 +431,7 @@
 			.loginType {
 				display: flex;
 				// padding: 350rpx 150rpx 150rpx 150rpx;
-				padding: 18rpx 150rpx 150rpx 150rpx;
+				padding: 18rpx 150rpx 58rpx 150rpx;
 				justify-content: space-between;
 
 				.item {

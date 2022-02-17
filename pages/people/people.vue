@@ -219,7 +219,7 @@
 				},
 				spaceShow: true,
 				modalName: null,
-				picName: '流星之夜',
+				picName: '人间理想',
 				pic: [{
 					link: 'https://cdn.zhoukaiwen.com/zjx_me_bg1.jpeg',
 					name: '春天'
@@ -236,8 +236,9 @@
 					link: 'https://cdn.zhoukaiwen.com/zjx_me_bg5.jpeg',
 					name: '幽静'
 				}, {
-					link: 'https://cdn.zhoukaiwen.com/zjx_me_bg6.jpg',
-					name: '天空'
+					// link: 'https://cdn.zhoukaiwen.com/zjx_me_bg6.jpg',
+					link: 'https://cdn.jsdelivr.net/gh/lijinghailjh/cdn/img/me/12.jpg',
+					name: '人间理想'
 				}],
 				topBackGroupImageIndex: 5,
 				inter: [{
@@ -262,7 +263,7 @@
 					color: ''
 				}, {
 					title: 'theme',
-					name: '流星之夜',
+					name: '人间理想',
 					color: ''
 				}]
 			}

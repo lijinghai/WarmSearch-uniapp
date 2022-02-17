@@ -35,7 +35,7 @@
 }
 .zai-box .buttom .loginType.data-v-b237504c {
   display: flex;
-  padding: 18rpx 150rpx 150rpx 150rpx;
+  padding: 18rpx 150rpx 58rpx 150rpx;
   justify-content: space-between;
 }
 .zai-box .buttom .loginType .item.data-v-b237504c {

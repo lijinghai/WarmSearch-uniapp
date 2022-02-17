@@ -1,5 +1,10 @@
+<!-- 寻失物页面
+  @author: lijing
+  @email: lijinghailjh@163.com
+  @Date: 2022 217
+-->
 <template>
-	<view class="u-wrap">>
+	<view class="u-wrap">
 		<cu-custom bgColor="bg-gradual-blue" :isBack="false">
 			<block slot="content">寻失物</block>
 		</cu-custom>
@@ -7,20 +12,20 @@
 		<view class="cu-bar bg-white search fixed" :style="[{top:CustomBar + 'px'}]">
 			<view class="search-form round">
 				<text class="cuIcon-search"></text>
-				<input type="text" v-model="keywords" placeholder="输入搜索的关键词" confirm-type="search"
-					@confirm="searchUserByKey"></input>
+				<input type="text" v-model="keywords" placeholder="输入搜索的关键词" confirm-type="search" @confirm="searchUserByKey"></input>
+				<!-- <u-search v-model="keywords" @custom="search" @search="search"></u-search> -->
 			</view>
 			<view class="action">
 				<button class="cu-btn bg-gradual-blue shadow-blur round" @tap="searchUserByKey">搜索</button>
 			</view>
 		</view>
-
-		<view class="u-search-box">
-			<view class="u-search-inner">
-				<u-icon name="search" color="#909399" :size="28"></u-icon>
-				<text class="u-search-text">搜索您想查找的内容</text>
+			
+			<view class="u-search-box">
+				<view class="u-search-inner">
+					<u-icon name="search" color="#909399" :size="28"></u-icon>
+					<text class="u-search-text">搜索您想查找的学生姓名</text>
+				</view>
 			</view>
-		</view>
 
 		<view class="pics">
 			<!-- 可滚动区域 -->
@@ -123,6 +128,126 @@
 </script>
 
 <style lang="scss" scoped>
+	.u-wrap {
+		height: calc(100vh);
+		/* #ifdef H5 */
+		height: calc(100vh - var(--window-top));
+		/* #endif */
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.u-search-box {
+		padding: 18rpx 30rpx;
+	}
+	
+	.u-menu-wrap {
+		flex: 1;
+		display: flex;
+		overflow: hidden;
+	}
+	
+	.u-search-inner {
+		background-color: rgb(234, 234, 234);
+		border-radius: 100rpx;
+		display: flex;
+		align-items: center;
+		padding: 10rpx 16rpx;
+	}
+	
+	.u-search-text {
+		font-size: 26rpx;
+		color: $u-tips-color;
+		margin-left: 10rpx;
+	}
+	
+	.u-tab-view {
+		width: 200rpx;
+		height: 100%;
+	}
+	
+	.u-tab-item {
+		height: 110rpx;
+		background: #f6f6f6;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 26rpx;
+		color: #444;
+		font-weight: 400;
+		line-height: 1;
+	}
+	
+	.u-tab-item-active {
+		position: relative;
+		color: #000;
+		font-size: 30rpx;
+		font-weight: 600;
+		background: #fff;
+	}
+	
+	.u-tab-item-active::before {
+		content: "";
+		position: absolute;
+		border-left: 4px solid $u-type-primary;
+		height: 32rpx;
+		left: 0;
+		top: 39rpx;
+	}
+	
+	.u-tab-view {
+		height: 100%;
+	}
+	
+	.right-box {
+		background-color: rgb(250, 250, 250);
+	}
+	
+	.page-view {
+		padding: 16rpx;
+	}
+	
+	.class-item {
+		margin-bottom: 30rpx;
+		background-color: #fff;
+		padding: 16rpx;
+		border-radius: 8rpx;
+	}
+	
+	.item-title {
+		font-size: 30rpx;
+		color: $u-main-color;
+		font-weight: bold;
+		margin: 10rpx 0;
+	}
+	
+	.item-menu-name {
+		font-weight: normal;
+		font-size: 24rpx;
+		color: $u-main-color;
+	}
+	
+	.item-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.thumb-box {
+		width: 33.333333%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-top: 20rpx;
+		margin-bottom: 10rpx;
+	}
+	
+	.item-menu-image {
+		width: 120rpx;
+		height: 120rpx;
+		border-radius: 100rpx;
+	}
 	.btnBox {
 		margin-top: -29px;
 		margin-left: 138px;

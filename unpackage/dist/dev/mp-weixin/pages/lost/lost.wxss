@@ -24,6 +24,106 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.u-wrap.data-v-2e2568f4 {
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+}
+.u-search-box.data-v-2e2568f4 {
+  padding: 18rpx 30rpx;
+}
+.u-menu-wrap.data-v-2e2568f4 {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.u-search-inner.data-v-2e2568f4 {
+  background-color: #eaeaea;
+  border-radius: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 16rpx;
+}
+.u-search-text.data-v-2e2568f4 {
+  font-size: 26rpx;
+  color: #909399;
+  margin-left: 10rpx;
+}
+.u-tab-view.data-v-2e2568f4 {
+  width: 200rpx;
+  height: 100%;
+}
+.u-tab-item.data-v-2e2568f4 {
+  height: 110rpx;
+  background: #f6f6f6;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #444;
+  font-weight: 400;
+  line-height: 1;
+}
+.u-tab-item-active.data-v-2e2568f4 {
+  position: relative;
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: #fff;
+}
+.u-tab-item-active.data-v-2e2568f4::before {
+  content: "";
+  position: absolute;
+  border-left: 4px solid #2979ff;
+  height: 32rpx;
+  left: 0;
+  top: 39rpx;
+}
+.u-tab-view.data-v-2e2568f4 {
+  height: 100%;
+}
+.right-box.data-v-2e2568f4 {
+  background-color: #fafafa;
+}
+.page-view.data-v-2e2568f4 {
+  padding: 16rpx;
+}
+.class-item.data-v-2e2568f4 {
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  padding: 16rpx;
+  border-radius: 8rpx;
+}
+.item-title.data-v-2e2568f4 {
+  font-size: 30rpx;
+  color: #303133;
+  font-weight: bold;
+  margin: 10rpx 0;
+}
+.item-menu-name.data-v-2e2568f4 {
+  font-weight: normal;
+  font-size: 24rpx;
+  color: #303133;
+}
+.item-container.data-v-2e2568f4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumb-box.data-v-2e2568f4 {
+  width: 33.333333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+.item-menu-image.data-v-2e2568f4 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100rpx;
+}
 .btnBox.data-v-2e2568f4 {
   margin-top: -29px;
   margin-left: 138px;
