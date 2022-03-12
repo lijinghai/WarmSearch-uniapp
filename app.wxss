@@ -1,3 +1,0 @@
-@import "colorui/main.wxss";
-@import "colorui/icon.wxss";
-@import 'uview-ui/theme.scss';

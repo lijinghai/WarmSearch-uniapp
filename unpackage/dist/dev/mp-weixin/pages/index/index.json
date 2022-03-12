@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "uni-notice-bar": "/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar",
-    "u-icon": "/uview-ui/components/u-icon/u-icon",
-    "u-line": "/uview-ui/components/u-line/u-line",
-    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore"
-  }
-}

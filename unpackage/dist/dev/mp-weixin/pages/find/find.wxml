@@ -1,1 +1,0 @@
-<view><cu-custom vue-id="5df3f5c0-1" bgColor="bg-gradual-blue" isBack="{{false}}" bind:__l="__l" vue-slots="{{['content']}}"><view slot="content">寻失主</view></cu-custom><view><find-item vue-id="5df3f5c0-2" list="{{findlist}}" data-event-opts="{{[['^itemClick',[['goDetail']]]]}}" bind:itemClick="__e" bind:__l="__l"></find-item></view></view>
